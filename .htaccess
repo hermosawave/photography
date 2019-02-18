@@ -1,0 +1,5 @@
+# RewriteEngine On
+# RewriteBase /potd/
+# RewriteCond %{QUERY_STRING} ^pixid=([0-9]*)$
+# RewriteRule ^detail\.php$ https://hermosawavephotography.com/%1/? [R=302,L]
+ErrorDocument 404 /404.html
