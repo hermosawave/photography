@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
-    <title>Latest Picture</title>
-        <!-- Typekit Asian Font Loader -->
+    <title>After Sunset</title>
+ 
+    <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 -->
@@ -18,13 +19,15 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-      <link rel="stylesheet" href="/assets/css/styles.css">
 
-      <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
   </head>
   <body>
-      <div class="mainbody">
-        
+    <div class="mainbody">
+
+         
 <nav>
   
     <div class="navitem">
@@ -32,7 +35,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </div>
   
     <div class="navitem">
-    <a href="/potd/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/potd/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -53,27 +56,28 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   
 </nav>
 
-        <!doctype html>
-<!-- get latest post -->
- 
-
      <div class="mainimage">
          <a href="/190221/">
-             <img id="img1"  src="/assets/images/2019/1902_A7R03673.jpg" alt="After Sunset" title="After Sunset"/>
+             <!-- OLD FORMAT: <img id="img1"  src="/assets/images//" alt="After Sunset" title="After Sunset - click for next photo"/> -->
+            <img id="img1"  src="/assets/images/2019/1902_A7R03673.jpg" alt="After Sunset" title="After Sunset - click for next photo"/>
          </a>
-   
-         <p class="subtitle">Hermosawave Picture of the Day</p>
-         <h3>Friday, February 22, 2019</h3>
+    </div>
+
+
+        <p class="subtitle">Hermosawave Picture of the Day</p>
+        <h3>Friday, February 22, 2019</h3>
 	<h2>After Sunset</h2>
- 	<p>
+	<p>
 One more from last night after sunset, north of the Hermosa Pier.
 </p>
 
       <h4>Taken in Hermosa Beach, California</h4>
 
-    <!-- exif data:-->
+
+
+   <!-- exif data:-->
     <div id="exif"></div>
-      </div>
+      
 
        <!-- exif js code... does it work? -->
     <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
@@ -99,16 +103,19 @@ One more from last night after sunset, north of the Hermosa Pier.
                  
                 
                 /* transformations */         
-                  var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
+                  var expo = (exposure < .51) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
                   
                   switch (model) {
                       case "ILCE-7RM3":
                           var mod = "a7r3";
                           break;
-                      case "ILCE-7RM2":
+                     case "ILCE-7M3":
+                          var mod = "a7III";
+                          break;
+                     case "ILCE-7RM2":
                           var mod = "a7r2";
                           break;
-                      case "FC2103":
+                      case "FC2103": 
                           var mod = "Mavic Air";
                           break;
                      default:
@@ -124,9 +131,7 @@ One more from last night after sunset, north of the Hermosa Pier.
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                  
-                /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
-                    
+                     
                   
                 /* Output */
                var exif = document.getElementById("exif");
@@ -136,24 +141,46 @@ One more from last night after sunset, north of the Hermosa Pier.
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
-                    ISO: ${iso} `;
+                    ISO: ${iso}`;
             });
         }
     </script>
-      <div class="post-nav">
+        
+        <!-- /// Google API ///
+    /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
+https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
+DMS: 35°0'45.804" N 135°40'20.14" E converts to: 35.01250000 135.67222222
+EXIF Returns: 35,0.7501,0   135,40.3623,0
 
-  <div>
-      
-    
-    <a href="/190221/">Feb 21: Low Tide Sunset &nbsp;&raquo;</a>
-    
-  </div>
+https://www.google.com/maps/search/?api=1&query=35.01250000,135.67222222
 
-</div>
+Try this:
+https://www.google.com/maps/search/?api=1&query=35,0.7501,0,135,40.3623,0
+
+
+More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-gps-information-to-lat-lng-decimal-numbers
+-->
+
+    <!-- Categories and Tags (not displayed now)-->
+      <div id="tagsection"> 
+         <p class="tags"> PictureCode: 190222 <br/>
+         Location: Hermosa Beach<br/>
+      Keywords: Dusk, Piers, Clouds, Beach</p> 
+         </div>
+        
+     
+    <!-- Previous Next Navigation -->
+   <div class="post-nav">
+        
        
-
-
-        <footer>
+        
+            <div class="post-nav-next">
+                <a href="/190221/">Feb&nbsp;21:&nbsp;Low Tide Sunset&nbsp;&raquo;</a>
+            </div>
+        
+     </div>
+     
+    <footer>
     <div class="footer1">
         
 <nav>
@@ -163,7 +190,7 @@ One more from last night after sunset, north of the Hermosa Pier.
     </div>
   
     <div class="navitem">
-    <a href="/potd/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/potd/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -202,6 +229,11 @@ One more from last night after sunset, north of the Hermosa Pier.
         Instagram: <a href="https://instagram.com/hermosawave.photography" target="_blank">@hermosawave.photography</a>
     </div>
 </footer>
-      </div>
+
+</div> <!-- end mainbody -->
+
+
+
+
   </body>
 </html>
