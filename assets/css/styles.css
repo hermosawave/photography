@@ -143,7 +143,7 @@ p.subtitle {
   display: inline-block;
   width: 23%;
   overflow: hidden;
-  margin: 10px 6px 30px 6px;
+  margin: 10px 1% 30px 6px;
   padding: 1px;
   text-align: center;
   font-size: 9pt;
@@ -152,12 +152,23 @@ p.subtitle {
   vertical-align: top; }
 
 .thumbnail.tag {
-  text-align: left; }
+  text-align: left;
+  background-color: #222;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 1% 30px 0;
+  border-radius: 8px; }
+
+.thumbnail.tag h3 {
+  margin: 0;
+  padding: 0;
+  border-bottom: solid 4px #000; }
 
 .thumbnail.tag ul {
-  border-left: 1px #666 solid;
-  padding: 0 0 0 10px;
-  list-style: none; }
+  margin: 0;
+  list-style: none;
+  height: 200px;
+  overflow: auto;
+  padding: 10px; }
 
 .thumbnail img {
   width: 99%;
