@@ -16,7 +16,7 @@ html {
 body {
   font-family: ryo-gothic-plusn, sans-serif;
   font-style: normal;
-  background-color: #1a1a1a;
+  background-color: #161616;
   margin: 0 0 10px 0;
   padding: 0 0 20px 0;
   color: #ccc;
@@ -29,7 +29,7 @@ body {
   max-width: 2048px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  border: 1px solid #444;
+  border: 1px solid #333;
   border-top: none; }
 
 .mainimage {
@@ -231,7 +231,7 @@ p.subtitle {
   text-align: center;
   padding: 10px 0 6px 0;
   margin: 20px -4.8% 0 -4.8%;
-  background-color: #1a1a1a;
+  background-color: #161616;
   font-size: 9pt;
   line-height: 12pt;
   text-transform: uppercase;
@@ -265,7 +265,7 @@ footer {
   line-height: 12pt;
   color: #666;
   text-align: center;
-  border-top: 1px #444 solid; }
+  border-top: 1px #333 solid; }
 
 .footer1,
 .footer2,
