@@ -16,7 +16,7 @@ html {
 body {
   font-family: ryo-gothic-plusn, sans-serif;
   font-style: normal;
-  background-color: #181818;
+  background-color: #1a1a1a;
   margin: 0 0 10px 0;
   padding: 0 0 20px 0;
   color: #ccc;
@@ -29,7 +29,7 @@ body {
   max-width: 2048px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  border: 1px solid #333;
+  border: 1px solid #444;
   border-top: none; }
 
 .mainimage {
@@ -161,7 +161,7 @@ p.subtitle {
 .thumbnail.tag h3 {
   margin: 0;
   padding: 0;
-  border-bottom: solid 4px #000; }
+  border-bottom: solid 2px #000; }
 
 .thumbnail.tag ul {
   margin: 0;
@@ -230,8 +230,8 @@ p.subtitle {
 .post-nav {
   text-align: center;
   padding: 10px 0 6px 0;
-  margin: 20px -5% 0 -5%;
-  background-color: #222;
+  margin: 20px -4.8% 0 -4.8%;
+  background-color: #1a1a1a;
   font-size: 9pt;
   line-height: 12pt;
   text-transform: uppercase;
@@ -265,7 +265,7 @@ footer {
   line-height: 12pt;
   color: #666;
   text-align: center;
-  border-top: 1px #333 solid; }
+  border-top: 1px #444 solid; }
 
 .footer1,
 .footer2,
