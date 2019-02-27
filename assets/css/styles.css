@@ -131,6 +131,9 @@ p.subtitle {
   padding: 0; }
 
 /* Thumbnails */
+.pagenumber {
+  font-size: 12pt; }
+
 .thumbnailgroup {
   margin-top: 10px; }
 
@@ -349,6 +352,12 @@ ul.photogallery {
 
   nav {
     padding: 15px 0 10px 0; }
+
+  .thumbnavleft {
+    margin-right: 8%; }
+
+  .thumbnavright {
+    margin-left: 8%; }
 
   .footer1,
   .footer2,
