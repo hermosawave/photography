@@ -358,6 +358,9 @@ ul.photogallery {
     max-width: 1024px;
     display: block; }
 
+  .mainimageleft {
+    height: 50%; }
+
   footer {
     margin: 0 -20px;
     padding: 10px 0px; }
@@ -455,6 +458,9 @@ ul.photogallery {
     margin: 0;
     padding: 0 10px;
     background-color: #000; }
+
+  .mainimageleft {
+    height: 35%; }
 
   nav {
     padding: 5px 0 10px 0; }
