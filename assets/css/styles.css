@@ -268,10 +268,10 @@ p.subtitle {
   color: cornflowerblue; }
 
 .thumbnavleft {
-  margin-right: 15%; }
+  margin-right: 12%; }
 
 .thumbnavright {
-  margin-left: 15%; }
+  margin-left: 12%; }
 
 /* // Footer stuff // */
 footer {
@@ -373,10 +373,10 @@ ul.photogallery {
     padding: 15px 0 10px 0; }
 
   .thumbnavleft {
-    margin-right: 6%; }
+    margin-right: 5%; }
 
   .thumbnavright {
-    margin-left: 6%; }
+    margin-left: 5%; }
 
   .footer1,
   .footer2,
@@ -417,11 +417,11 @@ ul.photogallery {
 
   .thumbnavleft {
     margin-right: 0;
-    padding-right: 5%; }
+    padding-right: 4%; }
 
   .thumbnavright {
     margin-left: 0;
-    padding-left: 5%; }
+    padding-left: 4%; }
 
   footer {
     padding: 10px;
