@@ -40,7 +40,7 @@ body {
 
 .mainimageleft {
   width: 30%;
-  height: 75%;
+  height: 60%;
   z-index: 100;
   position: absolute; }
 
@@ -359,7 +359,7 @@ ul.photogallery {
     display: block; }
 
   .mainimageleft {
-    height: 50%; }
+    height: 40%; }
 
   footer {
     margin: 0 -20px;
