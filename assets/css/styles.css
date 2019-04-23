@@ -76,8 +76,8 @@ h1 {
   margin: 10px 0 20px 0; }
 
 h2 {
-  font-size: 24pt;
-  line-height: 26pt;
+  font-size: 22pt;
+  line-height: 24pt;
   padding: 20px 0 5px 0; }
 
 h3 {
@@ -89,7 +89,7 @@ h3 {
   padding: 0; }
 
 h4 {
-  font-size: 12pt;
+  font-size: 10pt;
   line-height: 18pt; }
 
 a {
@@ -145,6 +145,9 @@ p.subtitle {
   text-transform: uppercase;
   margin: 0;
   padding: 0; }
+
+.mobile {
+  display: none; }
 
 /* Thumbnails */
 .pagenumber {
@@ -243,7 +246,7 @@ p.subtitle {
   margin: 0; }
 
 #tagsection {
-  /* display: none; */ }
+  display: none; }
 
 /* Post Navi */
 .post-nav {
@@ -486,6 +489,11 @@ ul.photogallery {
 
   .mobileyes {
     display: none; }
+
+  .mobile {
+    display: block;
+    font-size: 9pt;
+    color: #888; }
 
   .thumbnail {
     width: 47%;
