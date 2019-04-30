@@ -27,12 +27,15 @@ body {
 .mainbody {
   background-color: #000;
   margin: 0 5% 20px 5%;
-  padding: 0 4% 0 4%;
+  padding: 0;
   max-width: 2048px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   border: 1px solid #333;
   border-top: none; }
+
+.topbody {
+  padding: 0 4% 0 4%; }
 
 .mainimage {
   margin: 0 0 10px 0;
@@ -252,7 +255,7 @@ p.subtitle {
 .post-nav {
   text-align: center;
   padding: 10px 0 6px 0;
-  margin: 20px -4.8% 0 -4.8%;
+  margin: 20px 0 0 0;
   background-color: #161616;
   font-size: 9pt;
   line-height: 12pt;
@@ -281,7 +284,7 @@ footer {
   clear: both;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 0 -5%;
+  margin: 0;
   padding: 20px 0;
   font-size: 8pt;
   line-height: 12pt;
@@ -357,19 +360,23 @@ ul.photogallery {
 @media only screen and (max-width: 1024px) {
   .mainbody {
     margin: 0 30px 10px 30px;
-    padding: 0 20px 0 20px;
+    /* padding: 0 20px 0 20px; */
+    padding: 0;
     max-width: 1024px;
     display: block; }
+
+  .topbody {
+    padding: 0 4% 0 4%; }
 
   .mainimageleft {
     height: 40%; }
 
   footer {
-    margin: 0 -20px;
+    /*  margin: 0 -20px; */
     padding: 10px 0px; }
 
   .post-nav {
-    margin: 6px -20px 0 -20px;
+    /* margin: 6px -20px 0 -20px; */
     padding: 6px 10px 3px 10px; }
 
   nav {
@@ -399,15 +406,19 @@ ul.photogallery {
 
   .mainbody {
     margin: 0;
-    padding: 0 40px;
+    padding: 0;
     max-width: 780px;
     border: none; }
+
+  .topbody {
+    margin: 0;
+    padding: 0 20px; }
 
   nav {
     padding: 5px 0 10px 0; }
 
   .post-nav {
-    margin: 10px -40px 0 -40px;
+    margin: 10px 0 0 0;
     padding: 6px 5px 2px 5px;
     letter-spacing: 0px;
     font-size: 8pt;
@@ -427,8 +438,8 @@ ul.photogallery {
     padding-left: 4%; }
 
   footer {
-    padding: 10px;
-    margin: 0 -10px; }
+    padding: 10px 0;
+    margin: 0; }
 
   h2 {
     font-size: 16pt;
@@ -459,8 +470,11 @@ ul.photogallery {
 @media only screen and (max-width: 812px) and (orientation: portrait) {
   .mainbody {
     margin: 0;
-    padding: 0 10px;
+    padding: 0;
     background-color: #000; }
+
+  .topbody {
+    padding: 0 10px; }
 
   .mainimageleft {
     height: 75%; }
@@ -469,11 +483,15 @@ ul.photogallery {
     padding: 5px 0 10px 0; }
 
   .post-nav {
-    margin: 0 -10px;
+    margin: 0;
     padding: 6px 10px; }
 
   .post-nav div {
     padding: 0 4px; }
+
+  footer {
+    padding: 10px;
+    margin: 0; }
 
   .footer1,
   .footer2,
