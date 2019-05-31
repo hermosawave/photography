@@ -1,10 +1,11 @@
 <!doctype html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
-    <title>Latest Picture</title>
-        <!-- Typekit Asian Font Loader -->
+    <title>Hojo Garden • 方丈庭園</title>
+ 
+    <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 -->
@@ -18,17 +19,28 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-      <link rel="stylesheet" href="/assets/css/styles.css">
 
-      <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
-      
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
+           
       <!-- Clicky Site analytics -->
       <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101170903);</script>
       <script async src="//static.getclicky.com/js"></script>
+      
+      <!-- OpenGraph Attributes -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://hermosawavephotography.com/190531/" />
+      <meta property="og:image" content="https://hermosawavephotography.com/assets/images/2019/1905_A7R07220-HDR.jpg" />
+      <meta property="og:site_name" content="Hermosawave Photography" />
+      <meta property="og:image:type" content="image/jpeg" />   
+      <meta property="og:image:alt" content="Hojo Garden • 方丈庭園" />
+ 
 
   </head>
   <body>
-      <div class="mainbody">
+    <div class="mainbody">
+  
          
 <nav>
   
@@ -37,7 +49,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </div>
   
     <div class="navitem">
-    <a href="/potd/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/potd/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -58,32 +70,38 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   
 </nav>
 
-         
-                <!doctype html>
-
-<div class="topbody">
-<!-- get latest post -->
- 
-  
-     <div class="mainimage">
+        
+    <div class="topbody">
+    <div class="mainimage">
+         <div class="mainimageleft mobileyes">        
+             <a href="" title="<< Previous photo">
+                 <img class="clearpixel" src="/assets/images/clearpixel.png"/>
+             </a>
+         </div>
          <a href="/190530/">
-             <img id="img1"  src="/assets/images/2019/1905_A7R07220-HDR.jpg" alt="Hojo Garden • 方丈庭園" title="Next photo >>"/>
+          
+            <img id="img1"  src="/assets/images/2019/1905_A7R07220-HDR.jpg" alt="Hojo Garden • 方丈庭園" title="Next photo >>"/>
          </a>
-   
-         <p class="subtitle">Hermosawave Picture of the Day</p>
-         <h3>Friday, May 31, 2019</h3>
+    </div>
+
+
+        <p class="subtitle">Hermosawave Picture of the Day</p>
+        <h3>Friday, May 31, 2019</h3>
 	<h2>Hojo Garden • 方丈庭園</h2>
- 	<p>
+	<p>
   The beautiful zen garden at <a href="https://en.wikipedia.org/wiki/Nanzen-ji" target="_blank">Nanzen-ji</a>'s Abbot's quarters (Hojo Garden), designed in the 16th century. 
 
 </p>
+   
 
-              
-     <h4>Taken in Kyoto, Japan</h4>
+  
+      <h4>Taken in Kyoto, Japan</h4>
 
-    <!-- exif data:-->
+
+
+   <!-- exif data:-->
     <div id="exif"></div>
-      </div>
+      
 
        <!-- exif js code... does it work? -->
     <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
@@ -109,16 +127,19 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                  
                 
                 /* transformations */         
-                  var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
+                  var expo = (exposure < .51) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
                   
                   switch (model) {
                       case "ILCE-7RM3":
                           var mod = "a7r3";
                           break;
-                      case "ILCE-7RM2":
+                     case "ILCE-7M3":
+                          var mod = "a7III";
+                          break;
+                     case "ILCE-7RM2":
                           var mod = "a7r2";
                           break;
-                      case "FC2103":
+                      case "FC2103": 
                           var mod = "Mavic Air";
                           break;
                      default:
@@ -134,9 +155,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                  
-                /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
-                    
+                     
                   
                 /* Output */
                var exif = document.getElementById("exif");
@@ -146,31 +165,51 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
-                    ISO: ${iso} `;
+                    ISO: ${iso}`;
             });
         }
     </script>
+        
+        <!-- /// Google API ///
+    /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
+https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
+DMS: 35°0'45.804" N 135°40'20.14" E converts to: 35.01250000 135.67222222
+EXIF Returns: 35,0.7501,0   135,40.3623,0
+
+https://www.google.com/maps/search/?api=1&query=35.01250000,135.67222222
+
+Try this:
+https://www.google.com/maps/search/?api=1&query=35,0.7501,0,135,40.3623,0
+
+
+More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-gps-information-to-lat-lng-decimal-numbers
+-->
+
 
         <p class="mobile">Zoom in for more detail.</p>
       
         
-</div> <!-- end topbody -->
-
-      <div class="post-nav">
-
-  <div>
-      
-    
-    <a href="/190530/">May 30: Maple Aqueduct • 栴な感じ水路閣 &nbsp;&#8594;</a>
-    
-  </div>
-
-</div>
-       
+    <!-- Categories and Tags (not displayed now)-->
+      <div id="tagsection"> 
+         <p class="tags"> PictureCode: 190531 <br/>
+         Location: HigashiyamaKyoto<br/>
+      Keywords: Gardens, Temples</p> 
+         </div>
+   </div> <!-- end topbody -->     
 
 
+    <!-- Previous Next Navigation -->
+   <div class="post-nav">
         
-        <footer>
+       
+        
+            <div class="post-nav-next">
+                <a href="/190530/">May&nbsp;30:&nbsp;Maple Aqueduct • 栴な感じ水路閣&nbsp;&#8594;</a>
+            </div>
+        
+     </div>
+     
+    <footer>
     <div class="footer1">
         
 <nav>
@@ -180,7 +219,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </div>
   
     <div class="navitem">
-    <a href="/potd/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/potd/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -219,6 +258,11 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
         Instagram: <a href="https://instagram.com/hermosawave.photography" target="_blank">@hermosawave.photography</a>
     </div>
 </footer>
-      </div>
+
+
+  </div> <!-- end mainbody -->
+
+
+
   </body>
 </html>
