@@ -38,7 +38,7 @@ body {
   max-width: none; }
 
 .topbody {
-  padding: 0 4% 0 4%; }
+  padding: 0 3% 0 3%; }
 
 .mainimage {
   margin: 0 0 10px 0;
@@ -171,7 +171,7 @@ p.subtitle {
   display: inline-block;
   width: 23%;
   overflow: hidden;
-  margin: 10px 1% 20px 6px;
+  margin: 10px 1% 20px 5px;
   padding: 1px;
   text-align: center;
   font-size: 9pt;
@@ -361,7 +361,7 @@ ul.photogallery {
 /* ///////////// RESPONSIVE OVERRIDES  ///////////// */
 /* default wide screen */
 /* smaller monitor and ipad */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1032px) {
   .mainbody {
     margin: 0 30px 10px 30px;
     /* padding: 0 20px 0 20px; */
@@ -381,16 +381,20 @@ ul.photogallery {
 
   .post-nav {
     /* margin: 6px -20px 0 -20px; */
-    padding: 6px 10px 3px 10px; }
+    padding: 5px 10px 3px 10px; }
+
+  .post-nav div {
+    display: inline;
+    padding: 0 8px; }
 
   nav {
     padding: 15px 4% 10px 4%; }
 
   .thumbnavleft {
-    margin-right: 5%; }
+    margin-right: 4%; }
 
   .thumbnavright {
-    margin-left: 5%; }
+    margin-left: 4%; }
 
   .footer1,
   .footer2,
