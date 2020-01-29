@@ -18,7 +18,7 @@ body { font-family: ryo-gothic-plusn, sans-serif; /*  font-family: myriad-pro-se
 
 .topbody { padding: 0 3% 0 3%; }
 
-.mainimage { margin: 0 0 10px 0; padding: 0; }
+.mainimage { /*   margin: 0 0 10px 0; */ margin: 0 0 0 0; padding: 0; }
 
 .mainimageleft { width: 30%; height: 60%; z-index: 100; position: absolute; }
 
