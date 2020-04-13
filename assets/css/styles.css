@@ -157,7 +157,7 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
   footer { /*  margin: 0 -20px; */ padding: 10px 0px; }
   .post-nav { /* margin: 6px -20px 0 -20px; */ padding: 5px 10px 3px 10px; letter-spacing: 0; }
   .post-nav div { display: inline; padding: 0 8px; }
-  nav { padding: 15px 4% 10px 4%; }
+  nav { padding: 15px 3% 10px 3%; }
   .thumbnavleft { margin-right: 0; }
   .thumbnavright { margin-left: 0; }
   .footer1, .footer2, .footer3 { margin: 0 2%; }
@@ -169,7 +169,7 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
   .mainbody { margin: 0; padding: 0; max-width: 780px; border: none; }
   .topbody { margin: 0; padding: 0 20px; }
   .vertical .mainimage { width: 100%; padding: 0 0 0 0; float: none; }
-  nav { padding: 5px 20px 10px 20px; }
+  nav { padding: 10px 20px 10px 20px; letter-spacing: 1px; font-size: 8pt; }
   .post-nav { margin: 10px 0 0 0; padding: 6px 5px 2px 5px; letter-spacing: 0px; font-size: 8pt; line-height: 14pt; }
   .thumbnailimage { max-height: 200px; overflow: hidden; margin-bottom: 5px; }
   .thumbnavleft { margin-right: 0; padding-right: 4%; }
