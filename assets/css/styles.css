@@ -46,7 +46,7 @@ a:hover { text-decoration: none; color: cornflowerblue; }
 
 img { width: 100%; border-radius: 6px; }
 
-nav { font-size: 10pt; line-height: 20pt; font-weight: 400; text-transform: uppercase; padding: 20px 4% 20px 4%; letter-spacing: 1px; }
+nav { font-size: 10pt; line-height: 20pt; font-weight: 400; text-transform: uppercase; padding: 20px 3% 20px 3%; letter-spacing: 1px; }
 
 .navitem { display: inline; }
 
