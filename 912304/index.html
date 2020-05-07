@@ -1,0 +1,281 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
+    <title>Orange and Blue</title>
+ 
+    <!-- Typekit Asian Font Loader -->
+<!-- 
+font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
+-->
+ <script>
+  (function(d) {
+    var config = {
+      kitId: 'gwf6htn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
+           
+      <!-- Clicky Site analytics -->
+      <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101170903);</script>
+      <script async src="//static.getclicky.com/js"></script>
+      
+      <!-- OpenGraph Attributes -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://hermosawavephotography.com/912304/" />
+      <meta property="og:image" content="https://hermosawavephotography.com/assets/images/2006/IMG_9388.jpg" />
+      <meta property="og:site_name" content="Hermosawave Photography" />
+      <meta property="og:image:type" content="image/jpeg" />   
+      <meta property="og:image:alt" content="Orange and Blue" />
+ 
+
+  </head>
+  <body>
+    <div class="mainbody">
+  
+         
+<nav>
+  
+    <div class="navitem">
+    <a href="/" ><span class="hwp">Hermosawave&nbsp;Photography</span></a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/potd/" >Latest Picture</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/about.html" >About</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/thumbnails/" >Thumbnails</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/categories/" >Locations</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="https://gallery.hermosawave.photography/" >Shop</a>&nbsp;&nbsp;
+    </div>
+  
+</nav>
+
+        
+    <div class="topbody horizontal ">
+    <div class="mainimage">
+         <div class="mainimageleft mobileyes">        
+             <a href="/912305/" title="<< Previous photo">
+                 <img class="clearpixel" src="/assets/images/clearpixel.png"/>
+             </a>
+         </div>
+         <a href="/912302/">
+          
+            <img id="img1"  src="/assets/images/2006/IMG_9388.jpg" alt="Orange and Blue" title="Next photo >>"/>
+         </a>
+    </div>
+
+
+        <p class="subtitle">Hermosawave Picture of the Day</p>
+        <h3>Monday, July 17, 2006</h3>
+	<h2>Orange and Blue</h2>
+	<p>
+A muggy day breaks into watercolor clouds, this evening in Hermosa Beach.
+</p>
+
+   
+
+  
+      <h4>Taken in Hermosa Beach, California</h4>
+
+
+
+   <!-- exif data:-->
+    <div id="exif"></div>
+      
+
+       <!-- exif js code... does it work? -->
+    <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
+
+       <script>
+        "use strict";
+        window.onload=getExif;
+
+          function getExif() {
+            var img1 = document.getElementById("img1");
+
+              EXIF.getData(img1, function() {
+                var make = EXIF.getTag(this, "Make");
+                var model = EXIF.getTag(this, "Model");
+                var iso = EXIF.getTag(this, "ISOSpeedRatings");
+                var length = EXIF.getTag(this, "FocalLength");
+                var exposure = EXIF.getTag(this, "ExposureTime"); 
+                var aperture = EXIF.getTag(this, "FNumber");
+                var taken = EXIF.getTag(this, "DateTimeOriginal");
+                var caption = EXIF.getTag(this, "ImageDescription");
+                 var latitude = EXIF.getTag(this, "GPSLatitude");
+                var longitude = EXIF.getTag(this, "GPSLongitude");
+                 
+                
+                /* transformations */         
+                  var expo = (exposure < .51) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
+                  
+                  switch (model) {
+                      case "ILCE-7RM3":
+                          var mod = "a7r3";
+                          break;
+                     case "ILCE-7M3":
+                          var mod = "a7III";
+                          break;
+                     case "ILCE-7RM2":
+                          var mod = "a7r2";
+                          break;
+                      case "FC2103": 
+                          var mod = "Mavic Air";
+                          break;
+                     default:
+                          var mod = model;
+                  }
+                  
+                  
+                  // some string/date manipulations //
+                  
+                    var dt = taken.split(" ");
+                    var dtime = dt[1];
+                    dt = dt[0];
+                    var ddate = dt.replace(/:/g, "/");
+                    dtime = dtime.substring(0, 5);
+            
+                     
+                  
+                /* Output */
+               var exif = document.getElementById("exif");
+                exif.innerHTML =
+                    `Taken: ${ddate}, ${dtime}<br/>
+                    Camera: ${make} ${mod} <br/>
+                    Lens: ${length}mm <br/>
+                    Exposure: ${expo} <br/>
+                    Aperture: f/${aperture}<br/>
+                    ISO: ${iso}`;
+            });
+        }
+    </script>
+        
+        <!-- /// Google API ///
+    /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
+https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
+DMS: 35°0'45.804" N 135°40'20.14" E converts to: 35.01250000 135.67222222
+EXIF Returns: 35,0.7501,0   135,40.3623,0
+
+https://www.google.com/maps/search/?api=1&query=35.01250000,135.67222222
+
+Try this:
+https://www.google.com/maps/search/?api=1&query=35,0.7501,0,135,40.3623,0
+
+
+More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-gps-information-to-lat-lng-decimal-numbers
+-->
+
+
+        <p class="mobile">Zoom in for more detail.</p>
+        <p>PictureCode: 912304</p>
+      
+        
+    <!-- Categories and Tags (not displayed now)-->
+      <div id="tagsection"> 
+         <p class="tags"> PictureCode: 912304 <br/>
+         Location: Hermosa Beach<br/>
+      Keywords: Sunset, Beach, Clouds</p> 
+         </div>
+   </div> <!-- end topbody -->     
+
+
+    <!-- Previous Next Navigation -->
+   <div class="post-nav">
+        
+        <div>
+        <a href="/912305/">&#8592;&nbsp; Jul&nbsp;21: Sandlights</a>
+        </div>
+        <div>
+                &nbsp; <a href="/potd/">Latest</a> &nbsp;
+            <span class="mobileyes"> 
+                &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
+            </span>
+         
+        </div>
+        
+       
+        
+            <div class="post-nav-next">
+                <a href="/912302/">Jul&nbsp;16:&nbsp;Westwood In The Evening&nbsp;&#8594;</a>
+            </div>
+        
+     </div>
+     
+    <footer>
+    <div class="footer1">
+        
+<nav>
+  
+    <div class="navitem">
+    <a href="/" ><span class="hwp">Hermosawave&nbsp;Photography</span></a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/potd/" >Latest Picture</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/about.html" >About</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/thumbnails/" >Thumbnails</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/categories/" >Locations</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="https://gallery.hermosawave.photography/" >Shop</a>&nbsp;&nbsp;
+    </div>
+  
+</nav>
+
+    </div>
+    <div class="footer2">
+       <a href="/architecture">/architecture</a><br/> 
+       <a href="https://hermosawave.photography/potd/thumbnails.php">Archive (2006 &amp; Earlier)</a><br/>       
+       <a href="https://hermosawave.photography/picturecode/">PictureCode</a><br/>       
+      
+       <a href="https://hermosawavephotography.com/feed.xml">RSS Feed (Atom)</a><br/>
+
+     
+    </div> 
+
+    <div class="footer3">Photography and design by Daniel Sofer <br/>
+        &copy;2002-2020 Hermosawave Photography<br/> 
+        photos@hermosawavephotography.com<br/>
+        Twitter: <a href="https://twitter.com/hermosawave" target="_blank">@hermosawave</a><br/>
+        Instagram: <a href="https://instagram.com/hermosawave.photography" target="_blank">@hermosawave.photography</a><br/>
+       Flickr: <a href="https://www.flickr.com/photos/hermosawavephotography" target="_blank">hermosawavephotography</a>
+    </div>
+</footer>
+
+
+  </div> <!-- end mainbody -->
+
+
+
+  </body>
+</html>
