@@ -109,17 +109,17 @@ p.subtitle { font-weight: 300; font-size: 10pt; letter-spacing: 3px; text-transf
 #tagsection { display: none; }
 
 /* Post Navi */
-.post-nav { clear: both; text-align: center; padding: 10px 0 6px 0; margin: 20px 0 0 0; background-color: #333; font-size: 9pt; line-height: 12pt; text-transform: uppercase; letter-spacing: 1px; font-weight: 400; border-top: 1px #000 solid; }
+.post-nav { clear: both; text-align: center; padding: 8px 0 8px 0; margin: 20px 0 0 0; background-color: #333; font-size: 9pt; line-height: 12pt; text-transform: uppercase; letter-spacing: 1px; font-weight: 400; border-top: 1px #000 solid; }
 
-.post-nav div { display: inline; padding: 0 10px; }
+.post-nav div { display: inline; padding: 0 4px; }
 
 .post-nav a { color: #aaa; }
 
 .post-nav a:hover { color: cornflowerblue; }
 
-.thumbnavleft { margin-right: 5%; }
+.thumbnavleft { margin-right: 1%; }
 
-.thumbnavright { margin-left: 5%; }
+.thumbnavright { margin-left: 1%; }
 
 /* // Footer stuff // */
 footer { clear: both; text-transform: uppercase; letter-spacing: 1px; margin: 0; padding: 20px 0; font-size: 8pt; line-height: 12pt; color: #666; text-align: center; border-top: 1px #444 solid; }
@@ -157,14 +157,15 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
   .topbody { padding: 0 4% 0 4%; }
   .mainimageleft { height: 40%; }
   footer { /*  margin: 0 -20px; */ padding: 10px 0px; }
-  .post-nav { /* margin: 6px -20px 0 -20px; */ padding: 5px 10px 3px 10px; letter-spacing: 0; }
-  .post-nav div { display: inline; padding: 0 8px; }
-  nav { padding: 15px 3% 10px 3%; }
+  .post-nav { /* margin: 6px -20px 0 -20px; */ padding: 5px 10px 5px 10px; letter-spacing: 0; }
+  .post-nav div { display: inline; padding: 0 7px; }
+  nav { padding: 15px 3% 14px 3%; }
   .thumbnavleft { margin-right: 0; }
   .thumbnavright { margin-left: 0; }
   .footer1, .footer2, .footer3 { margin: 0 2%; }
   .thumbnail { width: 31%; }
-  .thumbnailgroup.float { width: 31%; } }
+  .thumbnailgroup.float { width: 31%; }
+  .midsize { display: none; } }
 
 /* iPhone horizontal and vertical? */
 @media only screen and (max-width: 812px) { body { margin: 0; padding: 0; }
@@ -181,7 +182,8 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
   h3 { font-size: 11pt; line-height: 14pt; }
   h4 { font-size: 10pt; line-height: 12pt; }
   p { font-size: 10pt; line-height: 15pt; }
-  p.subtitle { font-size: 8pt; line-height: 10pt; letter-spacing: 1px; padding: 0; margin: 0; } }
+  p.subtitle { font-size: 8pt; line-height: 10pt; letter-spacing: 1px; padding: 0; margin: 0; }
+  .midsize { display: none; } }
 
 /* iPhone vertical only */
 @media only screen and (max-width: 812px) and (orientation: portrait) { .mainbody { margin: 0; padding: 0; background-color: #000; }
@@ -193,6 +195,7 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
   footer { padding: 10px; margin: 0; }
   .footer1, .footer2, .footer3 { display: block; text-align: left; vertical-align: top; margin: 20px 0; line-height: 16pt; }
   footer .navitem { line-height: 16pt; }
+  .midsize { display: none; }
   .mobileyes { display: none; }
   .mobile { display: block; font-size: 9pt; color: #888; }
   .thumbnail { width: 47%; margin: 0 1px 20px 1px; }
