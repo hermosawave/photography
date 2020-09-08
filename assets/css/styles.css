@@ -154,6 +154,9 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
 
 /* ///////////// BILINGUAL FORMATTING ///////////// */
 /* basically only for standard horizontal images, will need to remove for phones */
+/* ///// BILINGUAL NAVIGATION //// */
+.jp_nav { display: none; }
+
 .horizontal .text { /* text block */ /* display: flex; turn on to split columns */ }
 
 .horizontal p.en { /* english text -- non bilingual posts will not have this */ /* flex:1; turn on to split columns, will need to pad*/ }
