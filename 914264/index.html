@@ -155,13 +155,14 @@ Looking at the Coronado Navy Base and Point Loma behind, this morning in San Die
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                     
+                  
+                       
                   
                 /* Output */
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${make} ${mod} <br/>
+                     Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
@@ -208,7 +209,7 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
         <a href="/914265/">&#8592;&nbsp; Nov&nbsp;3: Dusk at Marina Park</a>
         </div>
         <div>
-                &nbsp; <a href="/potd/">Latest</a> &nbsp;
+                &nbsp; <a href="/latest/">Latest</a> &nbsp;
             <span class="mobileyes"> 
                 &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
             </span>

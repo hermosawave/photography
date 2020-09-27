@@ -154,13 +154,14 @@ Night sky looking southeast from above Abelone Cove. You can see a white layer o
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                     
+                  
+                       
                   
                 /* Output */
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${make} ${mod} <br/>
+                     Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
@@ -207,7 +208,7 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
         <a href="/190806/">&#8592;&nbsp; Aug&nbsp;6: Afternoon Under the Pier</a>
         </div>
         <div>
-                &nbsp; <a href="/potd/">Latest</a> &nbsp;
+                &nbsp; <a href="/latest/">Latest</a> &nbsp;
             <span class="mobileyes"> 
                 &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
             </span>

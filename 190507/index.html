@@ -153,13 +153,14 @@ Looking at <a href="https://www.osakacastle.net/english/" target="blank">Osaka C
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                     
+                  
+                       
                   
                 /* Output */
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${make} ${mod} <br/>
+                     Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
@@ -206,7 +207,7 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
         <a href="/190508/">&#8592;&nbsp; May&nbsp;8: Ice • 氷</a>
         </div>
         <div>
-                &nbsp; <a href="/potd/">Latest</a> &nbsp;
+                &nbsp; <a href="/latest/">Latest</a> &nbsp;
             <span class="mobileyes"> 
                 &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
             </span>

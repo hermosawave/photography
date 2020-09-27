@@ -164,13 +164,14 @@ Looking out at the Seiryu-en Garden at <a href="https://en.wikipedia.org/wiki/Ni
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                     
+                  
+                       
                   
                 /* Output */
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${make} ${mod} <br/>
+                     Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
@@ -217,7 +218,7 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
         <a href="/190911/">&#8592;&nbsp; Sep&nbsp;11: Ninomaru Gate・二の丸御殿唐門</a>
         </div>
         <div>
-                &nbsp; <a href="/potd/">Latest</a> &nbsp;
+                &nbsp; <a href="/latest/">Latest</a> &nbsp;
             <span class="mobileyes"> 
                 &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
             </span>

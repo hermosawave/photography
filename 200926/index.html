@@ -95,7 +95,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 </p>
 
 <p class="jp">    
-    竹林の小径の交差点、静かな朝。
+    竹林の小道の交差点、静かな朝。
 </p> 
    
         </div>
@@ -159,13 +159,14 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                     
+                  
+                       
                   
                 /* Output */
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${make} ${mod} <br/>
+                     Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>

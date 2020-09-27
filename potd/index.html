@@ -81,7 +81,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 </p>
 
 <p class="jp">    
-    竹林の小径の交差点、静かな朝。
+    竹林の小道の交差点、静かな朝。
 </p> 
 
        </div>             
@@ -141,18 +141,25 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                     dtime = dtime.substring(0, 5);
             
                   
-                /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
+                  /* var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
                     
+                  
+                  
+                /*  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                  var verbosedate = (taken.toLocaleDateString("en-US", options)); // Saturday, September 17, 2016
+
+                 */    
                   
                 /* Output */
                var exif = document.getElementById("exif");
                 exif.innerHTML =
-                    `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${make} ${mod} <br/>
+                /*    `Taken: ${ddate}, ${dtime}<br/> */
+                    `Taken: ${taken}<br/>
+                      Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
-                    ISO: ${iso} `;
+                    ISO: ${iso}`;
             });
         }
     </script>
