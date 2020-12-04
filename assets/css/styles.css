@@ -98,6 +98,10 @@ p.subtitle { font-weight: 300; font-size: 10pt; letter-spacing: 3px; text-transf
 
 .thumbnail.float { width: 100%; }
 
+.buy_button { width: 200px; display: inline-block; border: 0; border-radius: 0.25rem; background: green; color: white; text-align: center; font-weight: 600; white-space: nowrap; text-decoration: none; padding: 8px; margin: 0 20px 8px 0; cursor: pointer; }
+
+.buy_button:hover { background: white; color: green; }
+
 /*　Subimages (secondary images on main photo page) */
 .subimagegroup { text-align: center; margin: 10px 0; }
 
