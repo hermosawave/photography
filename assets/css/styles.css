@@ -179,8 +179,6 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
 
 .form-entry input, .form-entry button { margin-left: 110px; width: 200px; }
 
-.form-entry #comment { height: 100px; }
-
 /* ///////////// RESPONSIVE OVERRIDES  ///////////// */
 /* default wide screen */
 /* smaller monitor and ipad */
