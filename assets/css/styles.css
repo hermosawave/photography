@@ -172,6 +172,15 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
 
 .horizontal p.jp { /*japanese text */ /* flex:1; turn on to split columns */ }
 
+/* ///// FORM STYLES ////// */
+.contact-form { margin-top: 5px; padding: 20px; border: 1px solid #444444; border-radius: 4px; }
+
+.form-label { width: 100px; position: absolute; text-align: right; }
+
+.form-entry input, .form-entry button { margin-left: 110px; width: 200px; }
+
+.form-entry #comment { height: 100px; }
+
 /* ///////////// RESPONSIVE OVERRIDES  ///////////// */
 /* default wide screen */
 /* smaller monitor and ipad */
