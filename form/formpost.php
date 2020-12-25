@@ -1,6 +1,6 @@
 
-<?php var_dump($_POST); 
+<?php 
 
-header('Location: formthanks.html&name=' . $_POST["name"]);
+header('Location: formthanks.html?name=' . $_POST["name"]);
 exit();
 ?>
