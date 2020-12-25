@@ -9,9 +9,8 @@ $message = $message . '
 <?php
 $to      = $email;
 $subject = 'Mailform Test';
-$headers = 'From: hostmaster@hermosawaveinternet.com\r\n
-    Reply-To: hostmaster@hermosawaveinternet.com\r\n
-    X-Mailer: PHP/' . phpversion();
+$headers = 'From: hostmaster@hermosawaveinternet.com';
+
 
 mail($to, $subject, $message, $headers);
 
