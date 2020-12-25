@@ -4,7 +4,6 @@ $message = 'This message was sent from ' . $_POST("name") . ' at ' . $email . ' 
 $message = $message . $_POST("comment");
 
 
-<?php
 $to      = $email;
 $subject = 'Mailform Test';
 $headers = 'From: hostmaster@hermosawaveinternet.com';
