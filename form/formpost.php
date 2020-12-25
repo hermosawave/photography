@@ -1,9 +1,7 @@
 <?php 
 $email = $_POST("email");
-$message = 'This message was sent from ' . $_POST("name") . ' at ' . $email;
-$message = $message . '
-
-' . $_POST("comment");
+$message = 'This message was sent from ' . $_POST("name") . ' at ' . $email . '     ';
+$message = $message . $_POST("comment");
 
 
 <?php
