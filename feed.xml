@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://hermosawavephotography.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hermosawavephotography.com/" rel="alternate" type="text/html" /><updated>2021-05-06T21:26:00+09:00</updated><id>https://hermosawavephotography.com/feed.xml</id><title type="html">Hermosawave Photography</title><subtitle>A series of daily landscape photographs by Daniel Sofer, over 16 years running.</subtitle><author><name>Daniel Sofer</name></author><entry><title type="html">Kyoto Station・京都駅</title><link href="https://hermosawavephotography.com/210506/" rel="alternate" type="text/html" title="Kyoto Station・京都駅" /><published>2021-05-06T00:00:00+09:00</published><updated>2021-05-06T00:00:00+09:00</updated><id>https://hermosawavephotography.com/kyoto-station</id><content type="html" xml:base="https://hermosawavephotography.com/210506/">&lt;p class=&quot;en&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://hermosawavephotography.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hermosawavephotography.com/" rel="alternate" type="text/html" /><updated>2021-05-07T14:08:59+09:00</updated><id>https://hermosawavephotography.com/feed.xml</id><title type="html">Hermosawave Photography</title><subtitle>A series of daily landscape photographs by Daniel Sofer, over 16 years running.</subtitle><author><name>Daniel Sofer</name></author><entry><title type="html">Arashiyama Sunrise・嵐山の日出</title><link href="https://hermosawavephotography.com/210507/" rel="alternate" type="text/html" title="Arashiyama Sunrise・嵐山の日出" /><published>2021-05-07T00:00:00+09:00</published><updated>2021-05-07T00:00:00+09:00</updated><id>https://hermosawavephotography.com/sunrise</id><content type="html" xml:base="https://hermosawavephotography.com/210507/">&lt;p class=&quot;en&quot;&gt;
+Early morning sunrise over Mt. Hiei and the Togetsu Bridge.
+&lt;/p&gt;
+
+&lt;p class=&quot;jp&quot;&gt;    
+
+渡月橋で早朝の日の出。比叡山は遠くにあります。
+&lt;/p&gt;</content><author><name>Daniel Sofer</name></author><category term="Sunrise" /><category term="Togetsu Bridge" /><summary type="html">Early morning sunrise over Mt. Hiei and the Togetsu Bridge.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://hermosawavephotography.com/assets/images/2021/2105_A7R06072-HDR.jpg" /></entry><entry><title type="html">Kyoto Station・京都駅</title><link href="https://hermosawavephotography.com/210506/" rel="alternate" type="text/html" title="Kyoto Station・京都駅" /><published>2021-05-06T00:00:00+09:00</published><updated>2021-05-06T00:00:00+09:00</updated><id>https://hermosawavephotography.com/kyoto-station</id><content type="html" xml:base="https://hermosawavephotography.com/210506/">&lt;p class=&quot;en&quot;&gt;
 Looking out the main entrance of Kyoto Station.
 &lt;/p&gt;
 
@@ -66,10 +73,4 @@ Last light on the Sea of Japan, in the town of Wajima.
 
 &lt;p class=&quot;jp&quot;&gt;    
 日本海の夕焼け、輪島市から。
-&lt;/p&gt;</content><author><name>Daniel Sofer</name></author><category term="Dusk" /><category term="Water" /><summary type="html">Last light on the Sea of Japan, in the town of Wajima.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://hermosawavephotography.com/assets/images/2021/2104_A7R05701.jpg" /></entry><entry><title type="html">Wajima Sunset・輪島の夕暮れ</title><link href="https://hermosawavephotography.com/210422/" rel="alternate" type="text/html" title="Wajima Sunset・輪島の夕暮れ" /><published>2021-04-22T00:00:00+09:00</published><updated>2021-04-22T00:00:00+09:00</updated><id>https://hermosawavephotography.com/wajimasunset</id><content type="html" xml:base="https://hermosawavephotography.com/210422/">&lt;p class=&quot;en&quot;&gt;
-Sunset on the Sea of Japan. Overlooking the Kamogaura rocks at Sodegahama Beach in Wajima, Ishikawa Prefecture.
-&lt;/p&gt;
-
-&lt;p class=&quot;jp&quot;&gt;    
-日本海の夕暮れ。 輪島の鴨ヶ浦。
-&lt;/p&gt;</content><author><name>Daniel Sofer</name></author><category term="Sunset" /><category term="Water" /><summary type="html">Sunset on the Sea of Japan. Overlooking the Kamogaura rocks at Sodegahama Beach in Wajima, Ishikawa Prefecture.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://hermosawavephotography.com/assets/images/2021/2104_A7R05677-HDR.jpg" /></entry></feed>
+&lt;/p&gt;</content><author><name>Daniel Sofer</name></author><category term="Dusk" /><category term="Water" /><summary type="html">Last light on the Sea of Japan, in the town of Wajima.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://hermosawavephotography.com/assets/images/2021/2104_A7R05701.jpg" /></entry></feed>
