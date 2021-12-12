@@ -173,7 +173,7 @@ ul.photogallery { width: 100%; padding: 0 0 0 10px; list-style: none; font-size:
 /* ///// BILINGUAL NAVIGATION //// */
 .jp_nav { display: none; }
 
-.jp { font-size: 10pt; line-height: 20pt; }
+.jp { font-size: 9pt; line-height: 16pt; }
 
 .title_jp { /* taken from h2 styles */ display: block; font-weight: 200; font-size: 17pt; line-height: 25pt; padding: 10px 0 0px 0; }
 
