@@ -54,7 +54,7 @@ nav a { text-decoration: none; color: #fff; }
 
 nav a:hover, nav a .hwp:hover { color: cornflowerblue; text-decoration: none; }
 
-nav .current { font-weight: 700; letter-spacing: 1px; }
+nav .current { font-weight: 700; }
 
 nav a .hwp { color: darkgoldenrod; }
 
