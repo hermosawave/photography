@@ -149,6 +149,9 @@ footer a { color: #ccc; /* #ccc is good too */ }
 
 footer img.calendar_thumb { max-width: 220px; padding: 10px 0; }
 
+/* Ko-Fi Button */
+.ko-fi-button { width: 240px; max-width: 100%; margin: 10px 0; }
+
 /* // front page divs // */
 #frontpageleft { width: 48%; float: left; }
 
