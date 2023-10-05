@@ -283,8 +283,8 @@ p.subtitle {
   width: 100%;
 }
 
-.buy_button {
-  width: 200px;
+.buy_button a {
+  width: 220px;
   display: inline-block;
   border: 0;
   border-radius: 0.25rem;
@@ -299,7 +299,7 @@ p.subtitle {
   cursor: pointer;
 }
 
-.buy_button:hover {
+.buy_button a:hover {
   background: white;
   color: green;
 }
