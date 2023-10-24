@@ -149,7 +149,7 @@ On a street filled with food trucks, cars and people; for just a moment, this va
                 var make = EXIF.getTag(this, "Make");
                 var model = EXIF.getTag(this, "Model");
                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
+               var length = EXIF.getTag(this, "FocalLength");
                 var exposure = EXIF.getTag(this, "ExposureTime"); 
                 var aperture = EXIF.getTag(this, "FNumber");
                 var taken = EXIF.getTag(this, "DateTimeOriginal");
@@ -196,7 +196,7 @@ On a street filled with food trucks, cars and people; for just a moment, this va
                     `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
+                      Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
                     ISO: ${iso}`;
             });

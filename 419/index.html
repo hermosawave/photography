@@ -147,7 +147,7 @@ Horse path along Palos Verdes Drive North in Rolling Hills Estates this afternoo
                 var make = EXIF.getTag(this, "Make");
                 var model = EXIF.getTag(this, "Model");
                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
+               var length = EXIF.getTag(this, "FocalLength");
                 var exposure = EXIF.getTag(this, "ExposureTime"); 
                 var aperture = EXIF.getTag(this, "FNumber");
                 var taken = EXIF.getTag(this, "DateTimeOriginal");
@@ -194,7 +194,7 @@ Horse path along Palos Verdes Drive North in Rolling Hills Estates this afternoo
                     `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
+                      Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
                     ISO: ${iso}`;
             });

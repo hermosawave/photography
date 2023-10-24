@@ -153,7 +153,7 @@ A small bridge across the Katsura River to Nakanoshima Island (left) in Arashiya
                 var make = EXIF.getTag(this, "Make");
                 var model = EXIF.getTag(this, "Model");
                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
+               var length = EXIF.getTag(this, "FocalLength");
                 var exposure = EXIF.getTag(this, "ExposureTime"); 
                 var aperture = EXIF.getTag(this, "FNumber");
                 var taken = EXIF.getTag(this, "DateTimeOriginal");
@@ -200,7 +200,7 @@ A small bridge across the Katsura River to Nakanoshima Island (left) in Arashiya
                     `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
+                      Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
                     ISO: ${iso}`;
             });

@@ -149,7 +149,7 @@ We’ve had several days of summery weather, but there's still some snow left on
                 var make = EXIF.getTag(this, "Make");
                 var model = EXIF.getTag(this, "Model");
                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
+               var length = EXIF.getTag(this, "FocalLength");
                 var exposure = EXIF.getTag(this, "ExposureTime"); 
                 var aperture = EXIF.getTag(this, "FNumber");
                 var taken = EXIF.getTag(this, "DateTimeOriginal");
@@ -196,7 +196,7 @@ We’ve had several days of summery weather, but there's still some snow left on
                     `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
+                      Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
                     ISO: ${iso}`;
             });

@@ -160,7 +160,7 @@ The sakura are in full bloom along the <a href="https://www.japan-guide.com/e/e3
                 var make = EXIF.getTag(this, "Make");
                 var model = EXIF.getTag(this, "Model");
                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
+               var length = EXIF.getTag(this, "FocalLength");
                 var exposure = EXIF.getTag(this, "ExposureTime"); 
                 var aperture = EXIF.getTag(this, "FNumber");
                 var taken = EXIF.getTag(this, "DateTimeOriginal");
@@ -207,7 +207,7 @@ The sakura are in full bloom along the <a href="https://www.japan-guide.com/e/e3
                     `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${make} ${mod} <br/>
                     Lens: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
+                      Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
                     ISO: ${iso}`;
             });
