@@ -809,7 +809,7 @@ h3.en {
   .mobile {
     display: block;
     font-size: 9pt;
-    color: #888;
+    /*color: #888;*/
   }
   .mobileinline {
     display: inline;
