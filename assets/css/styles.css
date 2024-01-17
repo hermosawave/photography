@@ -71,8 +71,8 @@ body {
 p {
   font-weight: 300;
   font-style: normal;
-  font-size: 11pt;
-  line-height: 17pt;
+  font-size: 12pt;
+  line-height: 18pt;
   padding-bottom: 15px;
   margin: 0;
 }
@@ -523,8 +523,8 @@ ul.photogallery {
 }
 
 .jp {
-  font-size: 10pt;
-  line-height: 17pt;
+  font-size: 11pt;
+  line-height: 18pt;
 }
 
 .title_jp { /* taken from h2 styles */
