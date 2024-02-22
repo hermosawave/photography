@@ -2,6 +2,6 @@
 	$goto = $_GET["s"];
 switch ($goto) {
 	default:
-		header("location:welcome.html");
+		header("location:home.html");
 }
 ?>
