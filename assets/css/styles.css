@@ -172,8 +172,22 @@ nav a .hwp {
   padding: 0;
 }
 
-ul {
-  color: #999;
+h3.listhead {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12pt;
+  line-height: 15pt;
+  padding-bottom: 10px;
+  margin: 0;
 }
 
 p.subtitle {
@@ -704,7 +718,7 @@ h3.en {
     font-weight: 700; */
   }
   h3 {
-    font-size: 12pt;
+    font-size: 14pt;
     line-height: 18pt;
   }
   h4 {
