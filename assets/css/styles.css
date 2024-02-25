@@ -274,6 +274,12 @@ p.subtitle {
   padding: 10px;
 }
 
+.thumbnail.tag li {
+  font-size: 8pt;
+  line-height: 10pt;
+  padding-bottom: 5px;
+}
+
 .thumbnail img {
   width: 99%;
   border: 1px solid #000;
