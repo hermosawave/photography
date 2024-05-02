@@ -503,6 +503,12 @@ footer img.calendar_thumb {
   margin: 0 0 20px 20px;
 }
 
+.bookfloatleft {
+  float: left;
+  width: 120px;
+  padding: 0 10px 10px 0;
+}
+
 /* /////////////  PICTURECODE STYLES  /////////////// */
 .picturecode img {
   float: right;
