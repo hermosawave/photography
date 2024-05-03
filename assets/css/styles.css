@@ -507,6 +507,7 @@ footer img.calendar_thumb {
   float: left;
   width: 120px;
   padding: 0 10px 10px 0;
+  border-radius: 6px;
 }
 
 /* /////////////  PICTURECODE STYLES  /////////////// */
