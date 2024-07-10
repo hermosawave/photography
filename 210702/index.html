@@ -179,6 +179,15 @@ A typical early summer afternoon in Southern California. Gloomy fog at the beach
                           var mod = model;
                   }
                   
+                  switch (make) {
+                      case "NIKON CORPORATION":
+                          var mak = "";
+                          break;
+                     
+                     default:
+                          var mak = make;
+                  }
+                  
                   
                   // some string/date manipulations //
                   
@@ -195,7 +204,7 @@ A typical early summer afternoon in Southern California. Gloomy fog at the beach
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                     Camera: ${make} ${mod} <br/>
+                     Camera: ${mak} ${mod} <br/>
                     Lens: ${length}mm <br/>
                       Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>

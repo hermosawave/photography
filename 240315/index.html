@@ -175,6 +175,15 @@ Most of the cherry trees at Shinjuku Gyoen garden are not yet flowering, but I d
                           var mod = model;
                   }
                   
+                  switch (make) {
+                      case "NIKON CORPORATION":
+                          var mak = "";
+                          break;
+                     
+                     default:
+                          var mak = make;
+                  }
+                  
                   
                   // some string/date manipulations //
                   
@@ -191,7 +200,7 @@ Most of the cherry trees at Shinjuku Gyoen garden are not yet flowering, but I d
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                     Camera: ${make} ${mod} <br/>
+                     Camera: ${mak} ${mod} <br/>
                     Lens: ${length}mm <br/>
                       Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>

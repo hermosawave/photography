@@ -173,6 +173,15 @@ This brutalist-style building houses a bookstore, bar upstairs and a Starbucks C
                           var mod = model;
                   }
                   
+                  switch (make) {
+                      case "NIKON CORPORATION":
+                          var mak = "";
+                          break;
+                     
+                     default:
+                          var mak = make;
+                  }
+                  
                   
                   // some string/date manipulations //
                   
@@ -189,7 +198,7 @@ This brutalist-style building houses a bookstore, bar upstairs and a Starbucks C
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                     Camera: ${make} ${mod} <br/>
+                     Camera: ${mak} ${mod} <br/>
                     Lens: ${length}mm <br/>
                       Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>

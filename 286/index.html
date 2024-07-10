@@ -172,6 +172,15 @@ Olives fly out of the olive washer at today’s Community Press Day at <a href="
                           var mod = model;
                   }
                   
+                  switch (make) {
+                      case "NIKON CORPORATION":
+                          var mak = "";
+                          break;
+                     
+                     default:
+                          var mak = make;
+                  }
+                  
                   
                   // some string/date manipulations //
                   
@@ -188,7 +197,7 @@ Olives fly out of the olive washer at today’s Community Press Day at <a href="
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                     Camera: ${make} ${mod} <br/>
+                     Camera: ${mak} ${mod} <br/>
                     Lens: ${length}mm <br/>
                       Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>

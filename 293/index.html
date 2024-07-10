@@ -172,6 +172,15 @@ Our roadtrip ends with this shot of the rocks at El Capitan beach, near Santa Ba
                           var mod = model;
                   }
                   
+                  switch (make) {
+                      case "NIKON CORPORATION":
+                          var mak = "";
+                          break;
+                     
+                     default:
+                          var mak = make;
+                  }
+                  
                   
                   // some string/date manipulations //
                   
@@ -188,7 +197,7 @@ Our roadtrip ends with this shot of the rocks at El Capitan beach, near Santa Ba
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                     Camera: ${make} ${mod} <br/>
+                     Camera: ${mak} ${mod} <br/>
                     Lens: ${length}mm <br/>
                       Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>

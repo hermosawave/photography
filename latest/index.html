@@ -91,25 +91,26 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 <div class="topbody horizontal ">
   
      <div class="mainimage">
-         <a href="/240707/">
-             <img id="img1"  src="/assets/images/2024/2407_DSCF9935_ai.jpg" alt="Agapanthus" title="Next photo >>"/>
+         <a href="/240708/">
+             <img id="img1"  src="/assets/images/2024/2407_DSC_0028.jpg" alt="Cloudy Beach" title="Next photo >>"/>
          </a>
     </div>
     <div class="description  ">
             <p class="subtitle">Hermosawave Picture of the Day</p>
-         <h3>Monday, July 8, 2024</h3>
-	<h2>Agapanthus</h2>
+         <h3>Tuesday, July 9, 2024</h3>
+	<h2>Cloudy Beach</h2>
  	   <div class="text">
  	      <p class="en">
-Close up on a blooming agapanthus in my neighborhood, at golden hour.
+Cold, windy beach before sunset.
  </p>
   
   <p class="jp">
-<span class="title_jp"> アガパンサス </span>
-近所のアガパンサスが咲いているクローズアップ写真、マジック・アワーで。</p>
+<span class="title_jp"> 曇りビーチ</span>
+日没前の寒くて風の強いビーチ。
+</p>
 
        </div>             
-     <h4>Taken in Torrance, California</h4>
+     <h4>Taken in Redondo Beach, California</h4>
 
     <!-- exif data:-->
     <div id="exif"></div>
@@ -155,6 +156,16 @@ Close up on a blooming agapanthus in my neighborhood, at golden hour.
                           var mod = model;
                   }
                   
+                        
+                  switch (make) {
+                      case "NIKON CORPORATION":
+                          var mak = "";
+                          break;
+                     
+                     default:
+                          var mak = make;
+                  }
+                  
                   
                   // some string/date manipulations //
                   
@@ -172,7 +183,7 @@ Close up on a blooming agapanthus in my neighborhood, at golden hour.
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${make} ${mod} <br/>
+                    Camera: ${mak} ${mod} <br/>
                     Lens: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
@@ -182,7 +193,7 @@ Close up on a blooming agapanthus in my neighborhood, at golden hour.
     </script>
 
         <p class="mobile">Zoom in for more detail.</p>
-              <p>PictureCode: 240708</p>
+              <p>PictureCode: 240709</p>
 
    </div> <!-- end description -->
        
@@ -193,7 +204,7 @@ Close up on a blooming agapanthus in my neighborhood, at golden hour.
   <div>
       
     
-    <a href="/240707/">Jul 7: Pier Plaza &nbsp;&#8594;</a>
+    <a href="/240708/">Jul 8: Agapanthus &nbsp;&#8594;</a>
     
   </div>
 

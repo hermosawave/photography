@@ -100,7 +100,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <div class="mainimage">
 
          <div class="mainimageleft mobileyes">        
-             <a href="" title="<< Previous photo">
+             <a href="/240709/" title="<< Previous photo">
                  <img class="clearpixel" src="/assets/images/clearpixel.png"/>
              </a>
          </div>
@@ -177,6 +177,15 @@ Close up on a blooming agapanthus in my neighborhood, at golden hour.
                           var mod = model;
                   }
                   
+                  switch (make) {
+                      case "NIKON CORPORATION":
+                          var mak = "";
+                          break;
+                     
+                     default:
+                          var mak = make;
+                  }
+                  
                   
                   // some string/date manipulations //
                   
@@ -193,7 +202,7 @@ Close up on a blooming agapanthus in my neighborhood, at golden hour.
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
-                     Camera: ${make} ${mod} <br/>
+                     Camera: ${mak} ${mod} <br/>
                     Lens: ${length}mm <br/>
                       Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
@@ -235,6 +244,17 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
 
     <!-- Previous Next Navigation -->
    <div class="post-nav">
+        
+        <div>
+        <a href="/240709/">&#8592;&nbsp; Jul&nbsp;9: Cloudy Beach</a>
+        </div>
+        <div>
+                &nbsp; <a href="/latest/">Latest</a> &nbsp;
+            <span class="mobileyes"> 
+                &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
+            </span>
+         
+        </div>
         
        
         
