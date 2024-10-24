@@ -348,6 +348,10 @@ p.subtitle {
   vertical-align: middle;
 }
 
+.left {
+  text-align: left;
+}
+
 /* exif */
 #exif {
   margin: 10px;
