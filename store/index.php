@@ -99,9 +99,15 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
      </div>
 
  <div id="frontpageright">
-         <p>
-             Picture sizes here
-            </p>
+     <p>All prints are made by the artist.</p>
+         <h3>Prints:</h3>
+         <p>5” x 7” (2L)</p>
+         <p>A4 (LTR)</p>
+         <p>13” x 19” (Super B, A3ノビ)</p>
+        <h3>Framed Prints:</h3>
+        <p>5” x 7” (2L)</p>
+        <p>A4 (LTR)</p>
+        <p>13” x 19” (Super B, A3ノビ)</p>
   </div>
        
 </div>
