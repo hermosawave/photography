@@ -88,12 +88,13 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <h1>Hermosawave Photography Store</h1>
 
     <div id="frontpageleft">
-        <h2><?php echo $_GET['title']; ?></h2>
             <p class="en">
                 <img src="<?php echo $_GET['image']; ?>" >
             </p>
-            <p class="en">
-                Picturecode <?php echo $_GET['picturecode']; ?>
+            <h2><?php echo $_GET['title']; ?></h2>
+      <p class="en">
+                <?php echo $_GET['date']; ?>  •  Picturecode <?php echo $_GET['picturecode']; ?>
+                <?php //  ?>
             </p>
      </div>
 
