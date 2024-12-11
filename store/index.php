@@ -85,15 +85,24 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
          
                 <div class="topbody">
-<h1>Hermosawave Photography Store</h1>
+    <h1>Hermosawave Photography Store</h1>
 
-<p>
-  <img src="<?php echo $_GET['image']; ?>" >
-    Picturecode <?php echo $_GET['picturecode']; ?>
-</p>
+    <div id="frontpageleft">
+        <h2><?php echo $_GET['title']; ?></h2>
+            <p class="en">
+                <img src="<?php echo $_GET['image']; ?>" >
+            </p>
+            <p class="en">
+                Picturecode <?php echo $_GET['picturecode']; ?>
+            </p>
+     </div>
 
-
-        
+ <div id="frontpageright">
+         <p>
+             Picture sizes here
+            </p>
+  </div>
+       
 </div>
 
 
