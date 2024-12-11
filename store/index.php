@@ -86,6 +86,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
          
                 <div class="topbody">
     <h1>Hermosawave Photography Store</h1>
+    <p>Under Construction</p>
 
     <div id="frontpageleft">
             <p class="en">
