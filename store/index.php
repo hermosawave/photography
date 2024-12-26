@@ -97,7 +97,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                 <?php 
                 $_GET['date'];
                //  $formatteddate == $photodate("F j, Y, g:i a");  
-                echo ($_GET['date'] && "  •  Picturecode: "  && $_GET['picturecode']); ?>
+                echo ($_GET['date'] . ' •  Picturecode: ' .  $_GET['picturecode']); ?>
              </p>
      </div>
 
