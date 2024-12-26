@@ -114,10 +114,11 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
            </select>
 
                <fieldset class="printoptions">
-                 <input type="radio" id="printoptions" name="printonly" value="print only" checked />
-                 <label for="printonly">Print Only</label>
-                  <input type="radio" id="printoptions" name="framed" value="Framed Print"  />
-                  <label for="framed">Framed Print</label>
+                 <input type="radio" id="printoptions" name="printoptions" value="print only" checked />
+                 <label for="printonly"> Print Only </label>
+                  
+                  <input type="radio" id="printoptions" name="printoptions" value="Framed Print"  />
+                  <label for="framed"> Framed Print </label>
                </fieldset>
                
                <ul class="printoptions">
