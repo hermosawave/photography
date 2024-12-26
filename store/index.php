@@ -105,13 +105,13 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
      <p>All prints are made to order by the artist.</p>
          <h3>Prints:</h3>
          <form>
-           <label for="printsize">Choose a Size:</label>
+           <label for="printsize"> Choose a Size:  </label>
            
            <select id="printsize">
-                <option value="">--Please choose a size--</option>
-                <option value="5x7">5x7</option>
-                <option value="A4">A4 (LTR)</option>
-                <option value="A3+">A3+</option>
+                <option value="">Please choose a size</option>
+                <option value="5x7">5" x 7" (2L)</option>
+                <option value="A4">A4, LTR (8.5" x 11")</option>
+                <option value="A3+">A3+, Super B (13"x19")</option>
            </select>
 
          </form>
