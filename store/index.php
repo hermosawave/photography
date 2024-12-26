@@ -102,7 +102,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
      </div>
 
  <div id="frontpageright">
-     <p>All prints are made to order by the artist.</p>
+     <p>I will make this print myself for you. It will take as long as 10 days for preparation. Please be patient.</p>
          <h3>Prints:</h3>
          <form id="printselect">
            <label for="printsize"> Choose a Size:  </label>       
