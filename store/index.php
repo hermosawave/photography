@@ -109,9 +109,9 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
            
            <select id="printsize">
                 <option value="">Please choose a size</option>
-                <option value="5x7">5" x 7" (2L)</option>
-                <option value="A4">A4, LTR (8.5" x 11")</option>
-                <option value="A3+">A3+, Super B (13"x19")</option>
+                <option value="5x7">127x178mm / 5"x7" (2L)</option>
+                <option value="A4">210x297mm / 8.5"x11" (A4, LTR)</option>
+                <option value="A3+">330x483mm / 13"x19" (A3+, Super B)</option>
            </select>
 
          </form>
