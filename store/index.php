@@ -104,31 +104,44 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
  <div id="frontpageright">
      <p>All prints are made to order by the artist.</p>
          <h3>Prints:</h3>
-         <form>
-           <label for="printsize"> Choose a Size:  </label>
-           
+         <form id="printselect">
+           <label for="printsize"> Choose a Size:  </label>       
            <select id="printsize">
-                <option value="">Please choose a size</option>
+                <option value="">Please choose a size:</option>
                 <option value="5x7">127x178mm / 5"x7" (2L)</option>
                 <option value="A4">210x297mm / 8.5"x11" (A4, LTR)</option>
                 <option value="A3+">330x483mm / 13"x19" (A3+, Super B)</option>
            </select>
 
-         </form>
-         <!-- don't use this... 
-         <p><script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-             <stripe-pricing-table pricing-table-id="prctbl_1QUgupJ9bHYdHf2n2xYRdrWX"
-             publishable-key="pk_live_mEH8H2NDXoHWuY5rij4ZfCIf">
-             </stripe-pricing-table>
-         </p>
-       -->
-        <h3>Framed Prints:</h3>
+               <fieldset class="printoptions">
+                 <input type="radio" id="printonly" name="printonly" value="print only" checked />
+                 <label for="printonly">Print Only</label>
+                  <input type="radio" id="framed" name="framed" value="Framed Print" checked />
+                  <label for="framed">Framed Print</label>
+               </fieldset>
+               
+               <ul class="printoptions">
+                 <li>Print only</li>
+                 <li>Framed Print</li>
+               </ul>
+                 
+                 <h3>Framed Prints:</h3>
         <p>5” x 7” (2L)</p>
         <p>A4 (LTR)</p>
         <p>13” x 19” (Super B, A3ノビ)</p>
-  </div>
+        
+        </form>
+  </div> <!-- end frontpageright -->
        
 </div>
+
+   <!-- don't use this... 
+   <p><script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+       <stripe-pricing-table pricing-table-id="prctbl_1QUgupJ9bHYdHf2n2xYRdrWX"
+       publishable-key="pk_live_mEH8H2NDXoHWuY5rij4ZfCIf">
+       </stripe-pricing-table>
+   </p>
+ -->
 
 
         
