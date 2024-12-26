@@ -97,13 +97,24 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                 <?php 
                 $_GET['date'];
                //  $formatteddate == $photodate("F j, Y, g:i a");  
-                echo ($_GET['date'] . ' •  Picturecode: ' .  $_GET['picturecode']); ?>
+                echo ($_GET['date'] . '  •  Picturecode: ' .  $_GET['picturecode']); ?>
              </p>
      </div>
 
  <div id="frontpageright">
-     <p>All prints are made by the artist.</p>
+     <p>All prints are made to order by the artist.</p>
          <h3>Prints:</h3>
+         <form>
+           <label for="printsize">Choose a pet:</label>
+           
+           <select id="printsize">
+             <option value="">--Please choose a size--</option>
+             <option value="5x7">5x7</option>
+             <option value="A4">A4 (LTR)</option>
+             <option value="A3+">A3+</option>
+                   </select>
+
+         </form>
          <!-- don't use this... 
          <p><script async src="https://js.stripe.com/v3/pricing-table.js"></script>
              <stripe-pricing-table pricing-table-id="prctbl_1QUgupJ9bHYdHf2n2xYRdrWX"
