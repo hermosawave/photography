@@ -85,7 +85,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
          
                 <div class="topbody">
-    <h1>Hermosawave Photography Store</h1>
+    <h1>Hermosawave Photography Print Store</h1>
     <p>Under Construction</p>
 
     <div id="frontpageleft">
@@ -103,9 +103,9 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
  <div id="frontpageright">
      <p>I will make your print myself. It may take as long as 10 days for preparation. Please be patient.</p>
-         <h3>Prints:</h3>
-         <form id="printselect">
-           <label for="printsize"> Choose a Size:  </label>       
+             <form id="printselect">
+               <h3>What size print would you like?</h3>              
+                
            <select id="printsize">
                 <option value="">Please choose a size:</option>
                 <option value="5x7">S - 127x178mm / 5"x7" (2L)</option>
@@ -114,14 +114,23 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
            </select>
 
                <fieldset class="printoptions">
-                 <input type="radio" id="printoptions" name="printoptions" value="print only" checked />
+                 <h3>Just the print, or a matted print in a frame?</h3>
+                 <input type="radio" id="printoptions" name="printoptions" value="Print Only" checked />
                  <label for="printonly"> Print Only </label>
                   
                   <input type="radio" id="printoptions" name="printoptions" value="Framed Print"  />
                   <label for="framed">Print in Frame</label>
+                  <p>Framed/Matted sizes:           
+                        <ul>
+                            <li>Small:</li>
+                          <li>Medium:</li>
+                          <li>Large:</li>
+                        </ul>
+                    </p> 
                </fieldset>
 
-        
+               <input class="printbutton" type="submit" value="Continue" />
+
         </form>
   </div> <!-- end frontpageright -->
        
