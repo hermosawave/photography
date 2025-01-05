@@ -102,15 +102,15 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
      </div>
 
  <div id="frontpageright">
-     <p>I will make this print myself for you. It will take as long as 10 days for preparation. Please be patient.</p>
+     <p>I will make your print myself. It may take as long as 10 days for preparation. Please be patient.</p>
          <h3>Prints:</h3>
          <form id="printselect">
            <label for="printsize"> Choose a Size:  </label>       
            <select id="printsize">
                 <option value="">Please choose a size:</option>
-                <option value="5x7">127x178mm / 5"x7" (2L)</option>
-                <option value="A4">210x297mm / 8.5"x11" (A4, LTR)</option>
-                <option value="A3+">330x483mm / 13"x19" (A3+, Super B)</option>
+                <option value="5x7">S - 127x178mm / 5"x7" (2L)</option>
+                <option value="A4">M - 210x297mm / 8.5"x11" (A4, LTR)</option>
+                <option value="A3+">L - 330x483mm / 13"x19" (A3+, Super B)</option>
            </select>
 
                <fieldset class="printoptions">
@@ -118,7 +118,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                  <label for="printonly"> Print Only </label>
                   
                   <input type="radio" id="printoptions" name="printoptions" value="Framed Print"  />
-                  <label for="framed"> Framed Print </label>
+                  <label for="framed">Print in Frame</label>
                </fieldset>
 
         
