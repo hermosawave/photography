@@ -629,6 +629,25 @@ h3.en {
   padding: 0;
 }
 
+.printselect {
+  padding: 50px 0 0 0;
+}
+
+.printoptions input:checked {
+  color: #fff;
+}
+
+.printoptions ul {
+  margin: 20px 0 10px 0;
+  padding: 0;
+  list-style-type: none; /* Remove bullets */
+}
+
+.printoptions li {
+  margin: 0 0 0 10px;
+  font-size: 10pt;
+}
+
 .printbutton {
   margin: 20px 0;
 }

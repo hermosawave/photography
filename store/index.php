@@ -102,11 +102,11 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
      </div>
 
  <div id="frontpageright">
-     <p>I will make your print myself. It may take as long as 10 days for preparation. Please be patient.</p>
+     <p>Prints are made to order. It may take as long as 10 days for preparation. Please be patient.</p>
              <form id="printselect">
                <h3>What size print would you like?</h3>              
                 
-           <select id="printsize">
+           <select class="printsize">
                 <option value="">Please choose a size:</option>
                 <option value="5x7">S - 127x178mm / 5"x7" (2L)</option>
                 <option value="A4">M - 210x297mm / 8.5"x11" (A4, LTR)</option>
@@ -115,18 +115,18 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
                <fieldset class="printoptions">
                  <h3>Just the print, or a matted print in a frame?</h3>
-                 <input type="radio" id="printoptions" name="printoptions" value="Print Only" checked />
+                 <input type="radio" id="printonly" name="printoptions" value="Print Only" checked />
                  <label for="printonly"> Print Only </label>
                   
-                  <input type="radio" id="printoptions" name="printoptions" value="Framed Print"  />
-                  <label for="framed">Print in Frame</label>
-                  <p>Framed/Matted sizes:           
-                        <ul>
-                            <li>Small:</li>
-                          <li>Medium:</li>
-                          <li>Large:</li>
+                  <input type="radio" id="framed" name="printoptions" value="Framed Print"  />
+                  <label for="framed">Print in Frame with Mat</label>
+  
+                        <ul>Framed/Matted Finished Sizes:          
+                            <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
+                          <li><strong>Medium: </strong> 330x410mm / 13"x16" </li>
+                          <li><strong>Large: </strong> 605x178mm / 25"x19" </li>
                         </ul>
-                    </p> 
+
                </fieldset>
 
                <input class="printbutton" type="submit" value="Continue" />
