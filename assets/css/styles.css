@@ -623,6 +623,13 @@ h3.en {
 
 /* Are we using the above styles anywhere? Picturecode maybe? */
 /* // 2025 Store Select Page // */
+img.matted {
+  border: 20px white solid;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
 .printoptions {
   border: 0;
   margin: 0;

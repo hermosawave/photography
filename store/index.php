@@ -90,7 +90,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
     <div id="frontpageleft">
             <p class="en">
-                <img src="<?php echo $_GET['image']; ?>" >
+                <img class="matted" src="<?php echo $_GET['image']; ?>" >
             </p>
             <h2><?php echo $_GET['title']; ?></h2>
       <p class="en">
@@ -112,7 +112,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                 <option value="A4">M - 210x297mm / 8.5"x11" (A4, LTR)</option>
                 <option value="A3+">L - 330x483mm / 13"x19" (A3+, Super B)</option>
            </select>
-
+           <p>Prints have a ~20mm / 0.75" white border, and are signed on the border by the artist. 
                <fieldset class="printoptions">
                  <h3>Just the print, or a matted print in a frame?</h3>
                  <input type="radio" id="printonly" name="printoptions" value="Print Only" checked />
@@ -121,10 +121,10 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                   <input type="radio" id="framed" name="printoptions" value="Framed Print"  />
                   <label for="framed">Print in Frame with Mat</label>
   
-                        <ul>Framed/Matted Finished Sizes:          
+                        <ul>Framed/Matted Finished Sizes (approximate):          
                             <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
                           <li><strong>Medium: </strong> 330x410mm / 13"x16" </li>
-                          <li><strong>Large: </strong> 605x178mm / 25"x19" </li>
+                          <li><strong>Large: </strong> 490x640mm / 25"x19" </li>
                         </ul>
 
                </fieldset>
