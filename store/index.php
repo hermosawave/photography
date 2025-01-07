@@ -124,7 +124,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                         <ul>Framed/Matted Finished Sizes (approximate):          
                             <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
                           <li><strong>Medium: </strong> 330x410mm / 13"x16" </li>
-                          <li><strong>Large: </strong> 490x640mm / 25"x19" </li>
+                          <li><strong>Large: </strong> 490x640mm / 19"x25" </li>
                         </ul>
 
                </fieldset>
