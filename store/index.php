@@ -103,10 +103,10 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
  <div id="frontpageright">
      <p>Prints are made to order. It may take as long as 10 days for preparation. Please be patient.</p>
-             <form id="printselect">
+             <form id="printselect" method="get" action="checkout.php">
                <h3>What size print would you like?</h3>              
                 
-           <select class="printsize">
+           <select name="printsize" id="printsize" class="printsize">
                 <option value="">Please choose a size:</option>
                 <option value="5x7">S - 127x178mm / 5"x7" (2L)</option>
                 <option value="A4">M - 210x297mm / 8.5"x11" (A4, LTR)</option>
@@ -129,6 +129,12 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
                </fieldset>
 
+               <!-- carried over values -->
+    
+               <input type="hidden" id="product_id" name="product_id" value="<?php echo $_GET['picturecode']; ?>" />
+               <input type="hidden" id="image_url" name="image_url" value="<?php echo 'https://hermosawavephotography.com' .  $_GET['image']; ?>" />
+               <input type="hidden" id="description" name="description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
+              
                <input class="printbutton" type="submit" value="Continue" />
 
         </form>
@@ -136,15 +142,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
        
 </div>
 
-   <!-- don't use this... 
-   <p><script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-       <stripe-pricing-table pricing-table-id="prctbl_1QUgupJ9bHYdHf2n2xYRdrWX"
-       publishable-key="pk_live_mEH8H2NDXoHWuY5rij4ZfCIf">
-       </stripe-pricing-table>
-   </p>
- -->
-
-
+  
         
         <footer>
     <div class="footer1">
