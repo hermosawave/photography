@@ -1,11 +1,11 @@
 <?php
 
 require_once('vendor/autoload.php');
-\Stripe\Stripe::setApiKey('sk_test_your_key');
+\Stripe\Stripe::setApiKey('sk_live_xAIwDPSwCps1kCOiBekWVTvT');
 
 // Get parameters from query string
 $productId = $_GET['product_id'];
-$description = $_GET['description'];\
+$description = $_GET['description'];
 $imageUrl = $_GET['image_url'];
 
 try {
@@ -35,8 +35,8 @@ try {
             'quantity' => 1,
         ]],
         'mode' => 'payment',
-        'success_url' => 'https://your-domain.com/success',
-        'cancel_url' => 'https://your-domain.com/cancel',
+        'success_url' => 'https://hermosawavephotography.com/store/success',
+        'cancel_url' => 'https://hermosawavephotography.com/store/cancel',
     ]);
 
     // Return session ID to your frontend
@@ -47,3 +47,4 @@ try {
 }
 
 ?>
+
