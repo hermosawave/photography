@@ -41,8 +41,8 @@ try {
             'quantity' => 1,
         ]],
         'mode' => 'payment',
-        'success_url' => $domain . '/success.php?session_id={CHECKOUT_SESSION_ID}',
-        'cancel_url' => $domain . '/cancel.php',
+        'success_url' => $domain . '/store/success.php?session_id={CHECKOUT_SESSION_ID}',
+        'cancel_url' => $domain . '/store/cancel.php',
         'billing_address_collection' => 'required',
         'shipping_address_collection' => true
 
