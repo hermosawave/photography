@@ -41,8 +41,9 @@ $price = \Stripe\Price::create([
         'success_url' => 'https://hermosawavephotography.com/store/success.php',
         'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
           'billing_address_collection' => 'required',
-          'shipping_address_collection' => [
-           'allowed_countries' => ['US', 'JP'] // Add countries you want to allow
+           'shipping_address_collection' => ['allowed_countries' => ['US', 'CA', 'JP']],
+           'automatic_tax' => ['enabled' => true],
+
 ]);
 
 } catch(\Stripe\Exception\ApiErrorException $e) {
