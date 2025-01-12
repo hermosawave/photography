@@ -89,7 +89,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <p>Thank you for your order!</p>
 
     <div id="frontpageleft">
-<?php echo "'session_id=' . $_GET['session_id'];  ?>
+<?php echo "'session_id=' . $_GET['session_id']";  ?>
       </div>
 
  <div id="frontpageright">
