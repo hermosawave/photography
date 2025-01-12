@@ -34,29 +34,28 @@ try {
     
 
     
-   $session = \Stripe\Checkout\Session::create([
-            'payment_method_types' => ['card'],
-            'line_items' => [[
-                'price' => $price->id,
-                'quantity' => 1
-            ]],
-            'mode' => 'payment',
-            'success_url' => 'https://hermosawavephotography.com/store/success.php',
-            'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php'
-        ]);
-    
-        // Let's see what happens
-        var_dump("Session creation attempted");
+    $session = \Stripe\Checkout\Session::create([
+        'payment_method_types' => ['card'],
+        'line_items' => [[
+            'price' => $price->id,
+            'quantity' => 1,
+        ]],
+        'mode' => 'payment',
+        'success_url' => 'https://hermosawavephotography.com/store/success.php?session_id={CHECKOUT_SESSION_ID}',
+        'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
+        // 'billing_address_collection' => 'required',
+        // 'shipping_address_collection' => true
+
+    ]);
+    // Add debug output
         var_dump($session);
     
     } catch(\Stripe\Exception\ApiErrorException $e) {
-        echo "Stripe Error: " . $e->getMessage() . "<br>";
-        echo "Error Type: " . $e->getError()->type . "<br>";
-        echo "Raw error: ";
-        var_dump($e->getError());
+        echo "Stripe Error: " . $e->getMessage();
+        echo "<br>Error Code: " . $e->getStripeCode();
+        echo "<br>Error Type: " . $e->getError()->type;
         die();
     }
-
   
 
 ?>
@@ -67,7 +66,7 @@ try {
 </head>
 <body>
     <script>
-        const stripe = Stripe('pk_live_mEH8H2NDXoHWuY5rij4ZfCIf');
+        const stripe = Stripe('pk_test_your_publishable_key');
         
         window.addEventListener('load', function() {
             console.log('Session ID:', '<?php echo $session->id; ?>');
