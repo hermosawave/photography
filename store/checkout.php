@@ -18,7 +18,8 @@ try {
         'images' => [$imageUrl],
         // You can add additional metadata if needed
         'metadata' => [
-            'product_id' => $productId
+            'product_id' => $productId,
+            'print_size' => $printSize
         ]
 ]);
 
