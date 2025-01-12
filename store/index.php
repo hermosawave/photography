@@ -104,30 +104,26 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
  <div id="frontpageright">
      <p>Prints are made to order. It may take as long as 10 days for preparation. Please be patient.</p>
              <form id="printselect" method="get" action="checkout.php">
-               <h3>What size print would you like?</h3>              
+               <h3>Please select a size and format for your print:</h3>              
                 
            <select name="printsize" id="printsize" class="printsize">
-                <option value="">Please choose a size:</option>
-                <option value="5x7">S - 127x178mm / 5"x7" (2L)</option>
-                <option value="A4">M - 210x297mm / 8.5"x11" (A4, LTR)</option>
-                <option value="A3+">L - 330x483mm / 13"x19" (A3+, Super B)</option>
+                <option value="">Please choose an option:</option>
+                <option value="Small Print">Small Print - 127x178mm / 5"x7" (2L)</option>
+                <option value="Small Framed Print">Small Framed Print  - 127x178mm / 5"x7" (2L)</option>
+                <option value="Medium Print">Medium Print - 210x297mm / 8.5"x11" (A4, LTR)</option>
+                <option value="Medium Pramed Print">Medium Framed Print - 210x297mm / 8.5"x11" (A4, LTR)</option>
+                <option value="Large Print">Large Print - 330x483mm / 13"x19" (A3+, Super B)</option>
+                <option value="Large Framed Print">Large Framed Print - 330x483mm / 13"x19" (A3+, Super B)</option>
            </select>
-           <p>Prints have a ~20mm / 0.75" white border, and are signed on the border by the artist. 
-               <fieldset class="printoptions">
-                 <h3>Just the print, or a matted print in a frame?</h3>
-                 <input type="radio" id="printonly" name="printoptions" value="Print Only" checked />
-                 <label for="printonly"> Print Only </label>
-                  
-                  <input type="radio" id="framed" name="printoptions" value="Framed Print"  />
-                  <label for="framed">Print in Frame with Mat</label>
-  
+           <p>Prints have a ~20mm / 0.75" white border, and are signed on the border by the artist. </p>
+   
                         <ul>Framed/Matted Finished Sizes (approximate):          
                             <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
                           <li><strong>Medium: </strong> 330x410mm / 13"x16" </li>
                           <li><strong>Large: </strong> 490x640mm / 19"x25" </li>
                         </ul>
 
-               </fieldset>
+
 
                <!-- carried over values -->
     

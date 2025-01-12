@@ -1,9 +1,16 @@
 <?php
+
 require_once('vendor/autoload.php');
 \Stripe\Stripe::setApiKey('sk_live_xAIwDPSwCps1kCOiBekWVTvT');
 
+// Get parameters from query string
+$productId = $_GET['product_id'];
+$description = $_GET['description'];
+$imageUrl = $_GET['image_url'];
+$printSize = $_GET['printsize'];
+
+
 try {
-    // Your existing product and price creation code...
     // Create the product
     $product = \Stripe\Product::create([
         'name' => "Product #{$productId}",
@@ -14,7 +21,7 @@ try {
             'product_id' => $productId
          ]
     ]);
-    
+
     // Create a price for the product (example with $20.00)
     $price = \Stripe\Price::create([
         'product' => $product->id,
@@ -22,10 +29,8 @@ try {
         'currency' => 'usd',
     ]);
     
-    
-    // Let's var_dump the price object to verify it's valid
-    var_dump($price);
-    
+
+    // Create a Checkout Session
     $session = \Stripe\Checkout\Session::create([
         'payment_method_types' => ['card'],
         'line_items' => [[
@@ -33,19 +38,19 @@ try {
             'quantity' => 1,
         ]],
         'mode' => 'payment',
-  'success_url' => 'https://hermosawavephotography.com/store/success',
-  'cancel_url' => 'https://hermosawavephotography.com/store/cancel',
-          'billing_address_collection' => 'required',
+        'success_url' => 'https://hermosawavephotography.com/store/success',
+        'cancel_url' => 'https://hermosawavephotography.com/store/cancel',
+        'billing_address_collection' => 'required',
         'shipping_address_collection' => true
     ]);
-    
-    // Let's var_dump the session object too
-    var_dump($session);
-    
+
+    // Return session ID to your frontend
+  echo json_encode(['id' => $session->id]);
+
 } catch(\Stripe\Exception\ApiErrorException $e) {
-    echo "Error: " . $e->getMessage();
-    die();
+    echo json_encode(['error' => $e->getMessage()]);
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,20 +59,17 @@ try {
 </head>
 <body>
     <script>
-        const stripe = Stripe('pk_test_your_publishable_key');
+        // Initialize Stripe
+        const stripe = Stripe('pk_live_mEH8H2NDXoHWuY5rij4ZfCIf');
         
+        // Redirect to Checkout as soon as the page loads
         window.addEventListener('load', function() {
-            console.log('Session ID:', '<?php echo $session->id; ?>');
             stripe.redirectToCheckout({
                 sessionId: '<?php echo $session->id; ?>'
-            }).then(function(result) {
-                if (result.error) {
-                    console.error(result.error);
-                    alert(result.error.message);
-                }
             });
         });
     </script>
-    <p>Redirecting to checkout...</p>
+    
+
 </body>
 </html>
