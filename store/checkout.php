@@ -32,6 +32,8 @@ try {
     // Let's var_dump the price object to verify it's valid
     var_dump($price);
     
+   $domain = "https://hermosawavephotography.com";  // Replace with your actual domain
+    
     $session = \Stripe\Checkout\Session::create([
         'payment_method_types' => ['card'],
         'line_items' => [[
@@ -39,19 +41,23 @@ try {
             'quantity' => 1,
         ]],
         'mode' => 'payment',
-  'success_url' => 'https://hermosawavephotography.com/store/success',
-  'cancel_url' => 'https://hermosawavephotography.com/store/cancel',
-          'billing_address_collection' => 'required',
+        'success_url' => $domain . '/success.php?session_id={CHECKOUT_SESSION_ID}',
+        'cancel_url' => $domain . '/cancel.php',
+        'billing_address_collection' => 'required',
         'shipping_address_collection' => true
+
     ]);
+    // Add debug output
+        var_dump($session);
     
-    // Let's var_dump the session object too
-    var_dump($session);
-    
-} catch(\Stripe\Exception\ApiErrorException $e) {
-    echo "Error: " . $e->getMessage();
-    die();
-}
+    } catch(\Stripe\Exception\ApiErrorException $e) {
+        echo "Stripe Error: " . $e->getMessage();
+        echo "<br>Error Code: " . $e->getStripeCode();
+        echo "<br>Error Type: " . $e->getError()->type;
+        die();
+    }
+  
+
 ?>
 <!DOCTYPE html>
 <html>
