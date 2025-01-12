@@ -2,10 +2,33 @@
 require_once('vendor/autoload.php');
 \Stripe\Stripe::setApiKey('sk_live_xAIwDPSwCps1kCOiBekWVTvT');
 
+// Get parameters from query string
+$productId = $_GET['product_id'];
+$description = $_GET['description'];
+$imageUrl = $_GET['image_url'];
+$printSize = $_GET['printsize'];
+
 try {
-    // Create product and price...
-    $product = \Stripe\Product::create([...]);
-    $price = \Stripe\Price::create([...]);
+    
+    // Your existing product and price creation code...
+    // Create the product
+    $product = \Stripe\Product::create([
+        'name' => "Product #{$productId}",
+        'description' => $description,
+        'images' => [$imageUrl],
+        // You can add additional metadata if needed
+        'metadata' => [
+            'product_id' => $productId
+        ]
+]);
+
+// Create a price for the product (example with $20.00)
+$price = \Stripe\Price::create([
+    'product' => $product->id,
+    'unit_amount' => 2000, // amount in cents
+    'currency' => 'usd',
+]);
+
 
     // Create session with all our features
     $session = \Stripe\Checkout\Session::create([
