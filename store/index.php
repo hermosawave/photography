@@ -111,7 +111,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                 <option value="Small Print">Small Print - 127x178mm / 5"x7" (2L)</option>
                 <option value="Small Framed Print">Small Framed Print  - 127x178mm / 5"x7" (2L)</option>
                 <option value="Medium Print">Medium Print - 210x297mm / 8.5"x11" (A4, LTR)</option>
-                <option value="Medium Pramed Print">Medium Framed Print - 210x297mm / 8.5"x11" (A4, LTR)</option>
+                <option value="Medium Framed Print">Medium Framed Print - 210x297mm / 8.5"x11" (A4, LTR)</option>
                 <option value="Large Print">Large Print - 330x483mm / 13"x19" (A3+, Super B)</option>
                 <option value="Large Framed Print">Large Framed Print - 330x483mm / 13"x19" (A3+, Super B)</option>
            </select>

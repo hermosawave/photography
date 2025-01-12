@@ -1,6 +1,8 @@
 <?php
 require_once('vendor/autoload.php');
-\Stripe\Stripe::setApiKey('sk_live_xAIwDPSwCps1kCOiBekWVTvT');
+require_once 'secrets.php';
+
+\Stripe\Stripe::setApiKey($stripeSecretKey);
 
 // Get parameters from query string
 $productId = $_GET['product_id'];
@@ -14,7 +16,7 @@ try {
     // Create the product
     $product = \Stripe\Product::create([
         'name' => "Product #{$productId}",
-        'description' => $description,
+        'description' => $description . ' - ' . $printSize,
         'images' => [$imageUrl],
         // You can add additional metadata if needed
         'metadata' => [
@@ -23,10 +25,35 @@ try {
         ]
 ]);
 
-// Create a price for the product (example with $20.00)
+// price calculator 
+switch ($printSize) {
+    case 'Small Print':
+        $printPrice = 1500; // amount in cents
+        break;
+    case 'Small Framed Print':
+        $printPrice = 3500;
+        break;
+    case 'Medium Print':
+        $printPrice = 2500;
+        break;
+    case 'Medium Framed Print':
+        $printPrice = 7500;
+        break;
+    case 'Large Print':
+        $printPrice = 5000;
+        break;
+    case 'Large Framed Print':
+        $printPrice = 15000;
+        break;
+    default:
+        $printPrice = 100;
+        break;
+}
+
+// Create a price for the product
 $price = \Stripe\Price::create([
     'product' => $product->id,
-    'unit_amount' => 2000, // amount in cents
+    'unit_amount' => $printPrice, // amount in cents
     'currency' => 'usd',
 ]);
 
@@ -42,6 +69,7 @@ $price = \Stripe\Price::create([
       'success_url' => 'https://hermosawavephotography.com/store/success.php',
       'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
       'billing_address_collection' => 'required',
+      'phone_number_collection' => ['enabled' => true],
       'shipping_address_collection' => [
           'allowed_countries' => ['US', 'CA', 'JP']
       ],
