@@ -42,7 +42,7 @@ $price = \Stripe\Price::create([
       'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
       'billing_address_collection' => 'required',
       'shipping_address_collection' => [
-          'allowed_countries' => ['US', 'CA', 'JP', 'UK', 'DE', 'AU']
+          'allowed_countries' => ['US', 'CA', 'JP']
       ],
       'automatic_tax' => [
           'enabled' => true
