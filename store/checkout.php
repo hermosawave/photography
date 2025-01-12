@@ -2,6 +2,12 @@
 require_once('vendor/autoload.php');
 \Stripe\Stripe::setApiKey('sk_live_xAIwDPSwCps1kCOiBekWVTvT');
 
+// Get parameters from query string
+$productId = $_GET['product_id'];
+$description = $_GET['description'];
+$imageUrl = $_GET['image_url'];
+$printSize = $_GET['printsize'];
+
 try {
     // Your existing product and price creation code...
     // Create the product
