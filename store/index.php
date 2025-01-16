@@ -85,55 +85,72 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
          
                 <div class="topbody">
-    <h1>Hermosawave Photography Print Store</h1>
-    <p>Under Construction</p>
+    <h1>Hermosawave Photography Print Store (Beta)</h1>
 
     <div id="frontpageleft">
+      <p class="en">Now printed to order by the artist. </p>
             <p class="en">
                 <img class="matted" src="<?php echo $_GET['image']; ?>" >
             </p>
-            <h2><?php echo $_GET['title']; ?></h2>
-      <p class="en">
-                <?php 
+            <h3><strong><?php echo $_GET['title']; ?></strong></h3>
+       <p class="en">
+                   <?php 
                 $_GET['date'];
                //  $formatteddate == $photodate("F j, Y, g:i a");  
-                echo ($_GET['date'] . '  •  Picturecode: ' .  $_GET['picturecode']); ?>
+                echo ($_GET['date'] . '  •  PictureCode: ' .  $_GET['picturecode']); ?>
              </p>
+             
+             <p>Prints are made to order. It may take as long as 10 days for preparation. Please be patient.</p>
+                  <form id="printselect" method="get" action="checkout.php">
+                    <h3>Please select a size and format for your print:</h3>              
+                     
+                <select name="printsize" id="printsize" class="printsize">
+                     <option value="">Please choose an option:</option>
+                     <option value="Small Print">Small Print: $15.00 (5"x7", 2L size)</option>
+                     <option value="Small Framed Print">Small Framed Print: $35.00 (5"x7", 2L size)</option>
+                     <option value="Medium Print">Medium Print: $25.00 (A4, Letter size)</option>
+                     <option value="Medium Framed Print">Medium Framed Print: $75.00 (A4, Letter size)</option>
+                     <option value="Large Print">Large Print: $50.00 (A3+, Super B size)</option>
+                     <option value="Large Framed Print">Large Framed Print: $150.00 (A3+, Super B size)</option>
+                </select>
+               
+             
+                    <!-- carried over values -->
+             
+                    <input type="hidden" id="product_id" name="product_id" value="<?php echo $_GET['picturecode']; ?>" />
+                    <input type="hidden" id="image_url" name="image_url" value="<?php echo 'https://hermosawavephotography.com' .  $_GET['image']; ?>" />
+                    <input type="hidden" id="description" name="description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
+                   
+                    <input class="printbutton" type="submit" value="Continue" />
+             
+             </form>
+            
      </div>
 
  <div id="frontpageright">
-     <p>Prints are made to order. It may take as long as 10 days for preparation. Please be patient.</p>
-             <form id="printselect" method="get" action="checkout.php">
-               <h3>Please select a size and format for your print:</h3>              
-                
-           <select name="printsize" id="printsize" class="printsize">
-                <option value="">Please choose an option:</option>
-                <option value="Small Print">Small Print - 127x178mm / 5"x7" (2L)</option>
-                <option value="Small Framed Print">Small Framed Print  - 127x178mm / 5"x7" (2L)</option>
-                <option value="Medium Print">Medium Print - 210x297mm / 8.5"x11" (A4, LTR)</option>
-                <option value="Medium Framed Print">Medium Framed Print - 210x297mm / 8.5"x11" (A4, LTR)</option>
-                <option value="Large Print">Large Print - 330x483mm / 13"x19" (A3+, Super B)</option>
-                <option value="Large Framed Print">Large Framed Print - 330x483mm / 13"x19" (A3+, Super B)</option>
-           </select>
-           <p>Prints have a ~20mm / 0.75" white border, and are signed on the border by the artist. </p>
-   
-                        <ul>Framed/Matted Finished Sizes (approximate):          
-                            <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
-                          <li><strong>Medium: </strong> 330x410mm / 13"x16" </li>
-                          <li><strong>Large: </strong> 490x640mm / 19"x25" </li>
-                        </ul>
-
-
-
-               <!-- carried over values -->
-    
-               <input type="hidden" id="product_id" name="product_id" value="<?php echo $_GET['picturecode']; ?>" />
-               <input type="hidden" id="image_url" name="image_url" value="<?php echo 'https://hermosawavephotography.com' .  $_GET['image']; ?>" />
-               <input type="hidden" id="description" name="description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
-              
-               <input class="printbutton" type="submit" value="Continue" />
-
-        </form>
+   <h2>Picture Options:</h2>
+   <h3>Print Only (large size shown):</h3>
+    <p class="en">
+       <img src="/assets/images/printshop/2404_A7R08715_ai_sized.jpg"/><br/>
+       Printed with a ~20mm / 1" border, and signed in the border by the artist.
+     </p>
+     <ul>Print Sizes:          
+         <li><strong>Small: </strong> 127x178mm / 5"x7" (2L)</li>
+       <li><strong>Medium: </strong> 210x297mm / 8.5"x11" (A4, LTR) </li>
+       <li><strong>Large: </strong> 330x483mm / 13"x19" (A3+, Super B)</li>
+     </ul>
+     
+     <h3>Framed and Matted Print:</h3>
+     <p class="en">
+      <img src="/assets/images/printshop/2404_A7R08715_ai.jpg"/><br/>
+      Shown: Print with white mat, in black metal frame. Artist’s signature is visible in the border, inside the mat. Special order options (at a small additional cost): black mat, black wood frame, white wood frame. Please inquire.
+    </p>
+    <ul>Framed Finished Sizes (approximate):          
+        <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
+      <li><strong>Medium: </strong> 330x410mm / 13"x16" </li>
+      <li><strong>Large: </strong> 490x640mm / 19"x25" </li>
+    </ul>
+  
   </div> <!-- end frontpageright -->
        
 </div>
@@ -189,10 +206,11 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
        Photography and design by Daniel Sofer <br/>
        Photos generally taken the day of posting; <br/>check the exposure info underneath for exact time.<br/>
           &copy;2002-2025 Hermosawave Photography<br/> <br/>
- 📬 <a href="mailto:photoweb@hermosawavephotography.com">        photos@hermosawavephotography.com</a><br/>
-    Mastodon: <a rel="me" href="https://photog.social/@hermosawave">@photog.social/@hermosawave</a><br/>
+ ✉️ <a href="mailto:photoweb@hermosawavephotography.com">        photos@hermosawavephotography.com</a><br/>
+    Mastodon: <a rel="me" href="https://famichiki.jp/@daniel">@famichiki.jp/@daniel</a><br/>
         BlueSky: <a rel="me" href="https://bsky.app/profile/hermosawavephotography.com">@hermosawavephotography.com</a><br/>
       Glass: <a href="https://glass.photo/hermosawave" target="_blank">@hermosawave</a><br/> 
+       Pixelfed: <a rel="me" href="https://pixelfed.social/hermosawave">@pixelfed.social/@hermosawave</a><br/>
          Instagram: <a href="https://instagram.com/hermosawave.photography" target="_blank">@hermosawave.photography</a><br/>
       Threads: <a rel="me" href="https://www.threads.net/@hermosawave.photography">@hermosawave.photography</a><br/>
         Subscribe to my <a href="https://hermosawavephotography.com/feed.xml">RSS Feed</a><br/>
