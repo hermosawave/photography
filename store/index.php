@@ -88,7 +88,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <h1>Hermosawave Photography Print Store (Beta)</h1>
 
     <div id="frontpageleft">
-      <p class="en">Now printed to order by the artist. </p>
+      <p class="en">Prints are made to order by the artist. It may take as long as 10 days for preparation. Please be patient.</p>
             <p class="en">
                 <img class="matted" src="<?php echo $_GET['image']; ?>" >
             </p>
@@ -100,18 +100,19 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                 echo ($_GET['date'] . '  •  PictureCode: ' .  $_GET['picturecode']); ?>
              </p>
              
-             <p>Prints are made to order. It may take as long as 10 days for preparation. Please be patient.</p>
+
                   <form id="printselect" method="get" action="checkout.php">
-                    <h3>Please select a size and format for your print:</h3>              
+                    <h3>Please select a size and format for your print:</h3>   
+                    <p class="en">Shipping is included in these prices.</p>           
                      
                 <select name="printsize" id="printsize" class="printsize">
-                     <option value="">Please choose an option:</option>
-                     <option value="Small Print">Small Print: $15.00 (5"x7", 2L size)</option>
-                     <option value="Small Framed Print">Small Framed Print: $35.00 (5"x7", 2L size)</option>
-                     <option value="Medium Print">Medium Print: $25.00 (A4, Letter size)</option>
-                     <option value="Medium Framed Print">Medium Framed Print: $75.00 (A4, Letter size)</option>
-                     <option value="Large Print">Large Print: $50.00 (A3+, Super B size)</option>
-                     <option value="Large Framed Print">Large Framed Print: $150.00 (A3+, Super B size)</option>
+                     <option value="INVALID: PLEASE GO BACK AND CHOOSE A PRINT SIZE">Please choose an option:</option>
+                     <option value="Small Print">Small Print: $20.00 (5"x7", 2L size)</option>
+                     <option value="Small Framed Print">Small Framed Print: $40.00 (5"x7", 2L size)</option>
+                     <option value="Medium Print">Medium Print: $35.00 (A4, Letter size)</option>
+                     <option value="Medium Framed Print">Medium Framed Print: $85.00 (A4, Letter size)</option>
+                     <option value="Large Print">Large Print: $60.00 (A3+, Super B size)</option>
+                     <option value="Large Framed Print">Large Framed Print: $175.00 (A3+, Super B size)</option>
                 </select>
                
              

@@ -16,32 +16,32 @@ $printSize = $_GET['printsize'];
 // price and shipping calculator 
 switch ($printSize) {
     case 'Small Print':
-        $printPrice = 1500; // amount in cents
+        $printPrice = 2000; // amount in cents
         $productSize =  'Small';
         break;
     case 'Small Framed Print':
-        $printPrice = 3500;
+        $printPrice = 4000;
         $productSize =  'Small';
         break;
     case 'Medium Print':
-        $printPrice = 2500;
+        $printPrice = 3500;
         $productSize =  'Medium';
         break;
     case 'Medium Framed Print':
-        $printPrice = 7500;
+        $printPrice = 8500;
         $productSize = 'Medium';
         break;
     case 'Large Print':
-        $printPrice = 5000;
+        $printPrice = 6000;
         $productSize = 'Large';
       break;
     case 'Large Framed Print':
-        $printPrice = 15000;
+        $printPrice = 17500;
         $productSize = 'Large';
         break;
     default:
-        $printPrice = 100;
-        $productSize = 'Medium';
+        $printPrice = 0;
+        $productSize = 'None';
         break;
 }
 
@@ -88,11 +88,14 @@ error_log("Product Size: " . $productSize);
       'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
       'billing_address_collection' => 'required',
       'phone_number_collection' => ['enabled' => true],
- //     'consent_collection' => ['promotions' => 'auto'],
+     'consent_collection' => ['promotions' => 'auto'],
     'shipping_address_collection' => [
         'allowed_countries' => ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'JP', 'AU', 'SG']
     ],
-//   'shipping_options' => ['shipping_rate' => 'shr_1Qhl2GJ9bHYdHf2n8FqCy7gR'],
+    'shipping_options' => [
+        ['shipping_rate' => 'shr_1Qi2W8J9bHYdHf2nhdgwc3el'], // free shipping
+  //      ['shipping_rate' => 'shr_1Qi2RbJ9bHYdHf2nLnudnTgJ'],
+    ],
     'automatic_tax' => [
         'enabled' => true
     ]
