@@ -11,13 +11,21 @@ $imageUrl = $_GET['image_url'];
 $printSize = $_GET['printsize'];
 
 
+function getShippingRegions() {
+    return [
+        'North_America' => ['US', 'CA', 'MX'],
+        'Europe' => ['GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'CH', 'SE', 'NO', 'DK', 'FI'],
+        'Asia_Pacific' => ['JP', 'KR', 'AU', 'NZ', 'SG', 'HK'],
+        // Add more regions as needed
+    ];
+}
 
 // switch statement to organize shipping prices
 // price and shipping calculator 
 switch ($printSize) {
     case 'Small Print':
         $printPrice = 1500; // amount in cents
-        $productSize =  'Small';
+        $productSize =  'Small Print';
         break;
     case 'Small Framed Print':
         $printPrice = 3500;
@@ -43,6 +51,62 @@ switch ($printSize) {
         $printPrice = 100;
         $productSize = 'Medium';
         break;
+}
+
+// start
+function getShippingRatesByRegion($productSize) {
+    $rates = [
+        'Small' => [
+            'US' => ['amount' => 500, 'days' => '5-7'],
+            'CA' => ['amount' => 1000, 'days' => '7-10'],
+            'Europe' => ['amount' => 1500, 'days' => '7-10'],
+            'Asia' => ['amount' => 2000, 'days' => '8-12']
+        ],
+        'Medium' => [
+            'US' => ['amount' => 800, 'days' => '5-7'],
+            'CA' => ['amount' => 1500, 'days' => '7-10'],
+            'Europe' => ['amount' => 2000, 'days' => '7-10'],
+            'Asia' => ['amount' => 2500, 'days' => '8-12']
+        ],
+        'Large' => [
+            'US' => ['amount' => 1200, 'days' => '5-7'],
+            'CA' => ['amount' => 2000, 'days' => '7-10'],
+            'Europe' => ['amount' => 2500, 'days' => '7-10'],
+            'Asia' => ['amount' => 3000, 'days' => '8-12']
+        ]
+    ];
+    
+    return $rates[$productSize] ?? $rates['Medium'];
+}
+
+// Get product size from URL
+// dont need // $productSize = isset($_GET['printsize']) ? trim($_GET['printsize']) : 'Medium';
+
+// Get rates for this size
+$rates = getShippingRatesByRegion($productSize);
+
+// Create shipping options array
+$shipping_options = [];
+
+// Create one shipping option per region for this size
+foreach($rates as $region => $rate) {
+    list($min_days, $max_days) = explode('-', $rate['days']);
+    $shipping_options[] = [
+        'shipping_rate_data' => [
+            'type' => 'fixed_amount',
+            'fixed_amount' => [
+                'amount' => $rate['amount'],
+                'currency' => 'usd',
+            ],
+            'display_name' => "Shipping to $region",
+            'delivery_estimate' => [
+                'minimum' => ['unit' => 'business_day', 'value' => (int)$min_days],
+                'maximum' => ['unit' => 'business_day', 'value' => (int)$max_days]
+            ],
+            'shipping_address_types' => ['shipping'],
+            'tax_behavior' => 'exclusive',
+        ]
+    ];
 }
 
 
@@ -94,13 +158,10 @@ error_log("Product Size: " . $productSize);
       'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
       'billing_address_collection' => 'required',
       'phone_number_collection' => ['enabled' => true],
-      'consent_collection' => ['promotions' => 'auto'],
     'shipping_address_collection' => [
         'allowed_countries' => ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'JP', 'AU', 'SG']
     ],
-   'shipping_options' => [
-       'shipping_rate' => ['shr_1Qhl2GJ9bHYdHf2n8FqCy7gR']
-   ],
+    'shipping_options' => $shipping_options,
     'automatic_tax' => [
         'enabled' => true
     ]
