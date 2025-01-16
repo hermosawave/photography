@@ -72,7 +72,7 @@ $price = \Stripe\Price::create([
 
 
 // For debugging
-//error_log("Product Size: " . $productSize);
+error_log("Product Size: " . $productSize);
 
 
 
@@ -88,11 +88,11 @@ $price = \Stripe\Price::create([
       'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
       'billing_address_collection' => 'required',
       'phone_number_collection' => ['enabled' => true],
-      'consent_collection' => ['promotions' => 'auto'],
+ //     'consent_collection' => ['promotions' => 'auto'],
     'shipping_address_collection' => [
         'allowed_countries' => ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'JP', 'AU', 'SG']
     ],
-   'shipping_options' => ['shipping_rate' => 'shr_1Qhl2GJ9bHYdHf2n8FqCy7gR'],
+//   'shipping_options' => ['shipping_rate' => 'shr_1Qhl2GJ9bHYdHf2n8FqCy7gR'],
     'automatic_tax' => [
         'enabled' => true
     ]
