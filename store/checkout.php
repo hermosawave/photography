@@ -92,9 +92,7 @@ $price = \Stripe\Price::create([
     'shipping_address_collection' => [
         'allowed_countries' => ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'JP', 'AU', 'SG']
     ],
-   'shipping_options' => [
-       'shipping_rate' => ['shr_1Qhl2GJ9bHYdHf2n8FqCy7gR']
-   ],
+   'shipping_options' => ['shipping_rate' => 'shr_1Qhl2GJ9bHYdHf2n8FqCy7gR'],
     'automatic_tax' => [
         'enabled' => true
     ]
