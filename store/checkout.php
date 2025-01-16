@@ -72,7 +72,7 @@ $price = \Stripe\Price::create([
 
 
 // For debugging
-error_log("Product Size: " . $productSize);
+//error_log("Product Size: " . $productSize);
 
 
 
