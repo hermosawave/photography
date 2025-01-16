@@ -70,12 +70,6 @@ $price = \Stripe\Price::create([
 ]);
 
 
-// Get all allowed countries
-$regions = getShippingRegions();
-$allowed_countries = [];
-foreach($regions as $countries) {
-    $allowed_countries = array_merge($allowed_countries, $countries);
-}
 
 // For debugging
 error_log("Product Size: " . $productSize);
@@ -98,9 +92,9 @@ error_log("Product Size: " . $productSize);
     'shipping_address_collection' => [
         'allowed_countries' => ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'JP', 'AU', 'SG']
     ],
-//   'shipping_options' => [
- //      'shipping_rate' => ['shr_1Qhl2GJ9bHYdHf2n8FqCy7gR']
-//   ],
+   'shipping_options' => [
+       'shipping_rate' => ['shr_1Qhl2GJ9bHYdHf2n8FqCy7gR']
+   ],
     'automatic_tax' => [
         'enabled' => true
     ]
