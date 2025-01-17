@@ -144,6 +144,9 @@ Flowers in bloom today at Descanso Gardens in La Cañada.
                 var make = EXIF.getTag(this, "Make");
                 var model = EXIF.getTag(this, "Model");
                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
+               var lensModel = EXIF.getTag(this, "undefined");
+               //var lensModel = EXIF.getTag(this, "Lens");
+               //var lensModel = EXIF.getTag(this, "LensInfo");
                var length = EXIF.getTag(this, "FocalLength");
                 var exposure = EXIF.getTag(this, "ExposureTime"); 
                 var aperture = EXIF.getTag(this, "FNumber");
@@ -151,8 +154,11 @@ Flowers in bloom today at Descanso Gardens in La Cañada.
                 var caption = EXIF.getTag(this, "ImageDescription");
                  var latitude = EXIF.getTag(this, "GPSLatitude");
                 var longitude = EXIF.getTag(this, "GPSLongitude");
+    
+       //debug
+       //console.log('All EXIF tags:', EXIF.getAllTags(this));        
                  
-                
+                   
                 /* transformations */         
                   var expo = (exposure < .51) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
                   
@@ -191,7 +197,6 @@ Flowers in bloom today at Descanso Gardens in La Cañada.
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
             
-                  
                        
                   
                 /* Output */
@@ -199,7 +204,8 @@ Flowers in bloom today at Descanso Gardens in La Cañada.
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${mak} ${mod} <br/>
-                    Lens: ${length}mm <br/>
+                     Lens: ${lensModel} <br/>                     
+                    Focal Length: ${length}mm <br/>
                       Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
                     ISO: ${iso}`;
