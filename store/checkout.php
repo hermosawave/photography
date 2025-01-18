@@ -16,7 +16,7 @@ $printSize = $_GET['printsize'];
 // price and shipping calculator 
 switch ($printSize) {
     case 'Small Print':
-        $printPrice = 2000; // amount in cents
+        $printPrice = 1500; // amount in cents
         $productSize =  'Small';
         break;
     case 'Small Framed Print':
@@ -90,7 +90,7 @@ error_log("Product Size: " . $productSize);
       'phone_number_collection' => ['enabled' => true],
      'consent_collection' => ['promotions' => 'auto'],
     'shipping_address_collection' => [
-        'allowed_countries' => ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'JP', 'AU', 'SG']
+        'allowed_countries' => ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES', 'NL', 'JP', 'AU', 'SG', 'AT', 'BE', 'BR', 'CN', 'HR', 'DK', 'EE', 'GR', 'GL', 'GU', 'HK', 'IS', 'IN', 'ID', 'IQ', 'IE', 'IL', 'JO', 'KR', 'KW', 'LV', 'LB', 'LU', 'MY', 'MX', 'MC', 'MA', 'NZ', 'NO', 'PS', 'PA', 'PE', 'PH', 'PL', 'PT', 'PR', 'QA', 'SA', 'SK', 'SI', 'ZA', 'SE', 'CH', 'TW', 'TH', 'TN', 'TR', 'UA', 'AE', 'UY', 'VE', 'VN', 'VG']
     ],
     'shipping_options' => [
         ['shipping_rate' => 'shr_1Qi2W8J9bHYdHf2nhdgwc3el'], // free shipping
