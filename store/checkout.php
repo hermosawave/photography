@@ -84,7 +84,7 @@ error_log("Product Size: " . $productSize);
             'quantity' => 1,
         ]],
       'mode' => 'payment',
-      'success_url' => 'https://hermosawavephotography.com/store/success.php',
+     'success_url' => 'https://hermosawavephotography.com/store/success.php?session_id={CHECKOUT_SESSION_ID}',
       'cancel_url' => 'https://hermosawavephotography.com/store/cancel.php',
       'billing_address_collection' => 'required',
       'phone_number_collection' => ['enabled' => true],

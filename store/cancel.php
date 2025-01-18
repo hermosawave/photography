@@ -85,8 +85,9 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
          
                 <div class="topbody">
-    <h1>Hermosawave Photography Print Store</h1>
-    <p>Cancelled</p>
+    <h1>Hermosawave Photography Print Store (beta)</h1>
+    <h2>Cancelled</h2>
+    <p class="en">Sorry, your order was cancelled. Please start again. </p>
 
     <div id="frontpageleft">
       </div>

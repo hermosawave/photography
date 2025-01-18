@@ -85,11 +85,63 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
          
                 <div class="topbody">
-    <h1>Hermosawave Photography Print Store</h1>
+    <h1>Hermosawave Photography Print Store (beta)</h1>
     <p>Thank you for your order!</p>
 
     <div id="frontpageleft">
-<?php echo ('session_id=' . $_GET['session_id']);  ?>
+<?php 
+require_once('vendor/autoload.php');
+require_once 'secrets.php';
+
+\Stripe\Stripe::setApiKey($stripeSecretKey);
+
+try {
+    // Retrieve the session
+    $session = \Stripe\Checkout\Session::retrieve($_GET['session_id']);
+    
+    // Get the line items for this session
+    $line_items = \Stripe\Checkout\Session::allLineItems($_GET['session_id']);
+    
+    // Get customer details
+    $customer = $session->customer_details;
+    
+    // Get shipping details
+    $shipping = $session->shipping_details;
+    
+    // Display order info
+    echo "<h2>Order Details</h2>";
+    echo "Customer: " . $customer->name . "<br>";
+    echo "Email: " . $customer->email . "<br>";
+    
+    if($shipping) {
+        echo "<h3>Shipping Address</h3>";
+        echo '<p class ="en">';
+        echo $shipping->name . "<br>";
+        echo $shipping->address->line1 . "<br>";
+        if($shipping->address->line2) echo $shipping->address->line2 . "<br>";
+        echo $shipping->address->city . ", " . $shipping->address->state . " " . $shipping->address->postal_code . "<br>";
+        echo $shipping->address->country . "<br>";
+        echo '</p>';
+    }
+    
+    echo "<h3>Purchased Items</h3>";
+        echo '<p class ="en">';
+    foreach($line_items->data as $item) {
+      $pictureCode = preg_replace('/[^0-9]/', '', $item->description); //strip extra stuff from Item Description, so I can make link...
+       echo 'Product: <a href="/' . $pictureCode . '" target="_blank">' . $pictureCode . '</a> (link to ordered photo) <br>'; 
+        echo "Quantity: " . $item->quantity . "<br>";
+        echo "Amount: $" . ($item->amount_total / 100) . "<br>";
+        echo '</p>';
+    }
+    
+    echo "<h3>Total Amount</h3>";
+    echo '<p class ="en">$' . ($session->amount_total / 100) . '</p>';
+
+} catch(\Stripe\Exception\ApiErrorException $e) {
+    echo 'Error retrieving order details: ' . $e->getMessage();
+}
+?>
+    
       </div>
 
  <div id="frontpageright">
