@@ -86,6 +86,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
          
                 <div class="topbody">
     <h1>Hermosawave Photography Print Store (Beta)</h1>
+    <!-- call it "Studio Prints" -->
 
     <div id="frontpageleft">
       <p class="en">Prints are made to order by the artist. It may take as long as 10 days for preparation. Please be patient.</p>
