@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
-    <title>Hermosawave Photography: Hermosawave Photography Store</title>
+    <title>Hermosawave Photography: Hermosawave Photography Shop</title>
         <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
@@ -85,7 +85,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
          
                 <div class="topbody">
-    <h1>Hermosawave Photography Print Store (Beta)</h1>
+    <h1>Hermosawave Photography Print Shop</h1>
     <!-- call it "Studio Prints" -->
 
     <div id="frontpageleft">
@@ -149,8 +149,8 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </p>
     <ul>Framed Finished Sizes (approximate):          
         <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
-      <li><strong>Medium: </strong> 330x410mm / 13"x16" </li>
-      <li><strong>Large: </strong> 490x640mm / 19"x25" </li>
+      <li><strong>Medium: </strong> 305x395mm / 12"x15.5" </li>
+      <li><strong>Large: </strong> 445x600mm / 17.5"x24" </li>
     </ul>
   
   </div> <!-- end frontpageright -->
