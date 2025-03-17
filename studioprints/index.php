@@ -28,7 +28,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
         width: 60%;
       }
       #printselect {
-        border: white, 1px, solid;
+        border: #fff 1px solid;
       }
       
       </style>
