@@ -25,7 +25,10 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
         color: white;
       }
       img.sampleprint {
-        width: 50%;
+        width: 60%;
+      }
+      #printselect {
+        border: white, 1px, solid;
       }
       
       </style>
@@ -110,7 +113,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
                   <form id="printselect" method="post" action="https://formspree.io/f/manenbqp">
                     <h3>Please select a size for your print:</h3>                      
-                <p><select name="printsize" id="printsize" class="printsize">
+                <p><select name="PrintSize" id="printsize" class="printsize">
                      <option value="INVALID: PLEASE GO BACK AND CHOOSE A PRINT SIZE">Please choose an option:</option>
                      <option value="Small Print">Small Print: $10.00 (5"x7", 2L size)</option>
                         <option value="Medium Print">Medium Print: $25.00 (A4, Letter size)</option>
@@ -119,22 +122,22 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
             </select>
                 </p>
                <p>Would you like it framed?<br/>
-              <input type="radio" id="print" name="frame?">
+              <input type="radio" id="print" name="Frame?" value="Print Only">
               <label for="print">Print Only</label><br/>
-             <input type="radio" id="frame" name="frame?" checked="checked"  >
+             <input type="radio" id="frame" name="Frame?"  value="Frame and Mat" checked="checked"  >
              <label for="frame">Framed and Matted Print</label><br/>
-             (A black metal frame with white mat is standard, as shown on right)
+             (A black metal frame with white mat is standard, as shown at top right)
              
                </p>
                
                <h3>Extra Cost Options:</h3>
                <p>
-                 <input type="checkbox" name="MatColor" value="MatColor">
-               <label for="FrameColor">Black Mat</label><br/>
-               <input type="checkbox" name="FrameColor" value="FrameColor">
+                 <input type="checkbox" name="Mat" value="Black Mat">
+               <label for="Mat">Black Mat</label><br/>
+               <input type="checkbox" name="FrameColor" value="White Frame">
                 <label for="FrameColor">White Frame</label><br/>
-               <input type="checkbox" name="FrameType" value="FrameType">
-               <label for="FrameColor">Wood Frame</label><br/>
+               <input type="checkbox" name="FrameType" value="Wood Frame">
+               <label for="FrameType">Wood Frame</label><br/>
                
                
                </p>
@@ -144,7 +147,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                     <input type="hidden" name="subject" value="Studio Photos Order Inquiry" />
                     <input type="hidden" id="product_id" name="picturecode" value="<?php echo $_GET['picturecode']; ?>" />
                     <input type="hidden" id="image_url" name="image_url" value="<?php echo 'https://hermosawavephotography.com' .  $_GET['image']; ?>" />
-                    <input type="hidden" id="description" name="description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
+                    <input type="hidden" id="description" name="Description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
                    
                 
              <p>Include your name, email, and shipping country. I will respond with an invoice confirming all the details, that can be paid online.</p>
