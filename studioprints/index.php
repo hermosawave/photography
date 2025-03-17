@@ -21,14 +21,23 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
       <link rel="stylesheet" href="/assets/css/styles.css">
       <style>
       .mainbody {
-        background-color: rgb(104, 104, 104);
+        background-color: rgb(102, 102, 102);
         color: white;
       }
       img.sampleprint {
-        width: 60%;
+        width: 100%;
       }
       #printselect {
-        border: #fff 1px solid;
+        border-left: #fff 1px solid;
+        padding-left: 16px;
+        accent-color: #0099ff;
+      }
+      .nopad {
+        margin-bottom: -0px;
+      }
+      
+      .footer1, .footer2, .footer3 {
+        color: white;
       }
       
       </style>
@@ -99,96 +108,104 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <!-- call it "Studio Prints" -->
 
     <div id="frontpageleft">
-                <p class="en">
+               
                 <img class="matted" src="<?php echo $_GET['image']; ?>" >
-            </p>
-            <h3><strong><?php echo $_GET['title']; ?></strong></h3>
-       <p class="en">
+
+           <p class="en"><?php echo $_GET['title']; ?>  <br/>
+     
                    <?php 
                 $_GET['date'];
                //  $formatteddate == $photodate("F j, Y, g:i a");  
                 echo ($_GET['date'] . '  •  PictureCode: ' .  $_GET['picturecode']); ?>
              </p>
              
+   <p class="en"> Prints are made to order by the artist on Epson Velvet Fine Art ink jet paper. Above is an approximation of what the print will look like. The hermosawave photography watermark will not appear on the print.</p>
+                         
+                  <h2>Framed and Matted Prints:</h2>
+                <p class="en">
+                 <img  class="sampleprint" src="/assets/images/printshop/2404_A7R08715_ai.jpg"/><br/>
+                 Shown: Standard print with white mat, in a black metal frame. The print is signed in the border by the artist, in pencil, inside the mat.
+               </p>
+               <ul>Framed Finished Sizes &amp; Prices:  
+  
+                   <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" /  $35.00</li>
+                 <li><strong>Medium: </strong> 305x395mm / 12"x15.5"  / $75.00</li>
+                 <li><strong>Large: </strong> 445x600mm / 17.5"x24" / $150.00 </li>
+               </ul>
+             <p class="en">      (plus shipping, 10% Sales Tax for California residents)       </p>
+             <h2>Print Only:</h2>
+             <p class="en">
+                <img class="sampleprint" src="/assets/images/printshop/2404_A7R08715_ai_print_crop.jpg"/><br/>
+                Printed with a ~20mm / 1" border, signed in the border by the artist, in pencil.
+              </p>
+              <ul>Print Sizes &amp; Prices:   
+                              
+                  <li><strong>Small: </strong> 127x178mm / 5"x7" (2L) / $15.00</li>
+                <li><strong>Medium: </strong> 210x297mm / 8.5"x11" (A4, LTR) / $25.00 </li>
+                <li><strong>Large: </strong> 330x483mm / 13"x19" (A3+, Super B) / $50.00</li>
+                <li>Custom prints as large as  914x1292mm / 36"x50" (A0) are available on special request.</li>
+              </ul>
+ <p class="en">       (plus shipping, 10% Sales Tax for California residents)       </p>
+                         
 
-                  <form id="printselect" method="post" action="https://formspree.io/f/manenbqp">
-                    <h3>Please select a size for your print:</h3>                      
-                <p><select name="PrintSize" id="printsize" class="printsize">
-                     <option value="INVALID: PLEASE GO BACK AND CHOOSE A PRINT SIZE">Please choose an option:</option>
-                     <option value="Small Print">Small Print: $10.00 (5"x7", 2L size)</option>
-                        <option value="Medium Print">Medium Print: $25.00 (A4, Letter size)</option>
-                         <option value="Large Print">Large Print: $50.00 (A3+, Super B size)</option>
-                       <option value="Custom">Custom (another size) </option>
-            </select>
-                </p>
-               <p>Would you like it framed?<br/>
-              <input type="radio" id="print" name="Frame?" value="Print Only">
-              <label for="print">Print Only</label><br/>
-             <input type="radio" id="frame" name="Frame?"  value="Frame and Mat" checked="checked"  >
-             <label for="frame">Framed and Matted Print</label><br/>
-             (A black metal frame with white mat is standard, as shown at top right)
-             
-               </p>
-               
-               <h3>Extra Cost Options:</h3>
-               <p>
-                 <input type="checkbox" name="Mat" value="Black Mat">
-               <label for="Mat">Black Mat</label><br/>
-               <input type="checkbox" name="FrameColor" value="White Frame">
-                <label for="FrameColor">White Frame</label><br/>
-               <input type="checkbox" name="FrameType" value="Wood Frame">
-               <label for="FrameType">Wood Frame</label><br/>
-               
-               
-               </p>
-                            
-             
-                    <!-- carried over values -->
-                    <input type="hidden" name="subject" value="Studio Photos Order Inquiry" />
-                    <input type="hidden" id="product_id" name="picturecode" value="<?php echo $_GET['picturecode']; ?>" />
-                    <input type="hidden" id="image_url" name="image_url" value="<?php echo 'https://hermosawavephotography.com' .  $_GET['image']; ?>" />
-                    <input type="hidden" id="description" name="Description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
-                   
-                
-             <p>Include your name, email, and shipping country. I will respond with an invoice confirming all the details, that can be paid online.</p>
-             
-             <label for="name">Name:</label><br/>
-             <input type="text" id="Name" name="Name" value="Name/お名前"><br/>
-             <label for="email">Email:</label><br/>
-              <input type="text" id="Email" name="Email" value="Email"><br/>
-             <label for="name">Shipping Country:</label><br/>
-             <input type="text" id="Country" name="Country" value="Country to ship to/国"><br/>
-             
-             <input class="printbutton" type="submit" value="Continue" />
-                   
-             </form>
-            
      </div>
 
  <div id="frontpageright">
-  <p>Prints are made to order by the artist, on Epson Velvet Fine Art paper. At left is an approximation of what the print will look like (the hermosawave photography watermark will not appear on the print).</p>
-     
-     <h2>Framed and Matted Prints:</h2>
-     <p class="en">
-      <img  class="sampleprint" src="/assets/images/printshop/2404_A7R08715_ai.jpg"/><br/>
-      Shown: Standard print with white mat, in a black metal frame. The artist’s signature in pencil is visible on the print, inside the mat.
-    </p>
-    <ul>Framed Finished Sizes (approximate):          
-        <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
-      <li><strong>Medium: </strong> 305x395mm / 12"x15.5" </li>
-      <li><strong>Large: </strong> 445x600mm / 17.5"x24" </li>
-    </ul>
-  
-  <h2>Print Only:</h2>
-  <p class="en">
-     <img class="sampleprint" src="/assets/images/printshop/2404_A7R08715_ai_sized.jpg"/><br/>
-     Printed with a ~20mm / 1" border, and signed in the border by the artist.
-   </p>
-   <ul>Print Sizes:          
-       <li><strong>Small: </strong> 127x178mm / 5"x7" (2L)</li>
-     <li><strong>Medium: </strong> 210x297mm / 8.5"x11" (A4, LTR) </li>
-     <li><strong>Large: </strong> 330x483mm / 13"x19" (A3+, Super B)</li>
-   </ul>
+<!-- orderform -->
+                   <form id="printselect" method="post" action="https://formspree.io/f/manenbqp">
+                     <h2>Print Order Inquiry</h2>
+                     <p class="en"> Include your name, email, shipping country; the desired size of your print, whether you would like it matted &amp; framed; and any other option.  We will respond with pricing and shipping details, and a link to pay  online.</p>  
+                     <p class="en"> <span class="nopad">Name:<br/></span>
+                     <input type="text" id="Name" name="Name" value="Name"></p>
+                    <p class="en"> <span class="nopad">Email:<br/></span>
+                      <input type="text" id="Email" name="Email" value="Email"></p>
+                    <p class="en"> <span class="nopad">Shipping Country:<br/></span>
+                     <input type="text" id="Country" name="Country" value="Country to ship to"></p>
+                     
+                     <h3>Please select a size for your print:</h3>                      
+                 <select name="PrintSize" id="printsize" class="printsize">
+                      <option value="PLEASE GO BACK AND CHOOSE A PRINT SIZE">Please choose an option:</option>
+                      <option value="Small Print">Small</option>
+                         <option value="Medium Print">Medium</option>
+                          <option value="Large Print">Large</option>
+                        <option value="Custom">Another size (enter desired size in comments below) </option>
+             </select>
+                 
+                <h3>Would you like your print framed?</h3>
+               <p class="en"> 
+             <input type="radio" id="print" name="Frame?" value="Print Only">
+              <label for="print">Print Only</label><br/>
+                 <input type="radio" id="frame" name="Frame?"  value="Frame and Mat" checked="checked"  >
+              <label for="frame">Framed and Matted Print</label><br/>
+              (A black metal frame with white mat is standard, as shown at left)   
+                 </p>             
+                <h3>Options:</h3>
+                <p class="en"> 
+                  <input type="checkbox" name="Mat" value="Black Mat">
+                <label for="Mat">Black Mat</label><br/>
+                <img src="/assets/images/printshop/2404_A7R08707_blackmat.jpg" style="width:50%" />
+                
+                <!-- <input type="checkbox" name="FrameColor" value="White Frame">
+                 <label for="FrameColor">White Frame</label><br/>
+                <input type="checkbox" name="FrameType" value="Wood Frame">
+                <label for="FrameType">Wood Frame</label><br/> -->
+                 </p>
+           
+                 <h3>Comments and Requests:</h3>
+                 <textarea name="Comments" rows="4" cols="40"/></textarea><br/>
+       
+                       <!-- carried over values -->
+                     <input type="hidden" name="subject" value="Studio Photos Order Inquiry" />
+                     <input type="hidden" id="product_id" name="picturecode" value="<?php echo $_GET['picturecode']; ?>" />
+                     <input type="hidden" id="image_url" name="image_url" value="<?php echo 'https://hermosawavephotography.com' .  $_GET['image']; ?>" />
+                     <input type="hidden" id="description" name="Description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
+              
+            <input type="text" name="_gotcha" style="display:none" />
+              <input class="printbutton" type="submit" value="Send Inquiry" />
+              </form>         
+ <!-- end orderform -->
+ 
+
   
   </div> <!-- end frontpageright -->
        
@@ -246,12 +263,12 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
        Photos generally taken the day of posting; <br/>check the exposure info underneath for exact time.<br/>
           &copy;2002-2025 Hermosawave Photography<br/> <br/>
  ✉️ <a href="mailto:photoweb@hermosawavephotography.com">        photos@hermosawavephotography.com</a><br/>
-    Mastodon: <a rel="me" href="https://famichiki.jp/@daniel">@famichiki.jp/@daniel</a><br/>
-        BlueSky: <a rel="me" href="https://bsky.app/profile/hermosawavephotography.com">@hermosawavephotography.com</a><br/>
+    Mastodon: <a href="https://famichiki.jp/@daniel">@famichiki.jp/@daniel</a><br/>
+        BlueSky: <a href="https://bsky.app/profile/hermosawavephotography.com">@hermosawavephotography.com</a><br/>
       Glass: <a href="https://glass.photo/hermosawave" target="_blank">@hermosawave</a><br/> 
-       Pixelfed: <a rel="me" href="https://pixelfed.social/hermosawave">@pixelfed.social/@hermosawave</a><br/>
+       Pixelfed: <a href="https://pixelfed.social/hermosawave">@pixelfed.social/@hermosawave</a><br/>
          Instagram: <a href="https://instagram.com/hermosawave.photography" target="_blank">@hermosawave.photography</a><br/>
-      Threads: <a rel="me" href="https://www.threads.net/@hermosawave.photography">@hermosawave.photography</a><br/>
+      Threads: <a href="https://www.threads.net/@hermosawave.photography">@hermosawave.photography</a><br/>
         Subscribe to my <a href="https://hermosawavephotography.com/feed.xml">RSS Feed</a><br/>
         <a href="/privacy/">Privacy Policy</a>   <br/>
                   
