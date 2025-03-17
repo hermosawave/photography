@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
-    <title>Hermosawave Photography: Hermosawave Photography Shop</title>
+    <title>Hermosawave Photography: Studio Prints</title>
         <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
@@ -19,6 +19,16 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   })(document);
 </script>
       <link rel="stylesheet" href="/assets/css/styles.css">
+      <style>
+      .mainbody {
+        background-color: rgb(104, 104, 104);
+        color: white;
+      }
+      img.sampleprint {
+        width: 50%;
+      }
+      
+      </style>
 
       <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
       
@@ -86,8 +96,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <!-- call it "Studio Prints" -->
 
     <div id="frontpageleft">
-      <p class="en">Prints are made to order by the artist. </p>
-            <p class="en">
+                <p class="en">
                 <img class="matted" src="<?php echo $_GET['image']; ?>" >
             </p>
             <h3><strong><?php echo $_GET['title']; ?></strong></h3>
@@ -99,55 +108,84 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
              </p>
              
 
-                  <form id="printselect" method="get" action="checkout.php">
-                    <h3>Please select a size and format for your print:</h3>                      
-                <select name="printsize" id="printsize" class="printsize">
+                  <form id="printselect" method="post" action="https://formspree.io/f/manenbqp">
+                    <h3>Please select a size for your print:</h3>                      
+                <p><select name="printsize" id="printsize" class="printsize">
                      <option value="INVALID: PLEASE GO BACK AND CHOOSE A PRINT SIZE">Please choose an option:</option>
                      <option value="Small Print">Small Print: $10.00 (5"x7", 2L size)</option>
-                     <option value="Small Framed Print">Small Framed Print: $30.00 (5"x7", 2L size)</option>
-                     <option value="Medium Print">Medium Print: $25.00 (A4, Letter size)</option>
-                     <option value="Medium Framed Print">Medium Framed Print: $65.00 (A4, Letter size)</option>
-                     <option value="Large Print">Large Print: $50.00 (A3+, Super B size)</option>
-                     <option value="Large Framed Print">Large Framed Print: $125.00 (A3+, Super B size)</option>
-                     <option value="Other">Custom sizes and other options (canvas, metal, etc.) are available. </option>
+                        <option value="Medium Print">Medium Print: $25.00 (A4, Letter size)</option>
+                         <option value="Large Print">Large Print: $50.00 (A3+, Super B size)</option>
+                       <option value="Custom">Custom (another size) </option>
             </select>
+                </p>
+               <p>Would you like it framed?<br/>
+              <input type="radio" id="print" name="frame?">
+              <label for="print">Print Only</label><br/>
+             <input type="radio" id="frame" name="frame?" checked="checked"  >
+             <label for="frame">Framed and Matted Print</label><br/>
+             (A black metal frame with white mat is standard, as shown on right)
+             
+               </p>
                
+               <h3>Extra Cost Options:</h3>
+               <p>
+                 <input type="checkbox" name="MatColor" value="MatColor">
+               <label for="FrameColor">Black Mat</label><br/>
+               <input type="checkbox" name="FrameColor" value="FrameColor">
+                <label for="FrameColor">White Frame</label><br/>
+               <input type="checkbox" name="FrameType" value="FrameType">
+               <label for="FrameColor">Wood Frame</label><br/>
+               
+               
+               </p>
+                            
              
                     <!-- carried over values -->
-             
-                    <input type="hidden" id="product_id" name="product_id" value="<?php echo $_GET['picturecode']; ?>" />
+                    <input type="hidden" name="subject" value="Studio Photos Order Inquiry" />
+                    <input type="hidden" id="product_id" name="picturecode" value="<?php echo $_GET['picturecode']; ?>" />
                     <input type="hidden" id="image_url" name="image_url" value="<?php echo 'https://hermosawavephotography.com' .  $_GET['image']; ?>" />
                     <input type="hidden" id="description" name="description" value="<?php echo $_GET['date'] . ': ' . $_GET['title']; ?>" />                     
                    
-                    <input class="printbutton" type="submit" value="Continue" />
+                
+             <p>Include your name, email, and shipping country. I will respond with an invoice confirming all the details, that can be paid online.</p>
              
+             <label for="name">Name:</label><br/>
+             <input type="text" id="Name" name="Name" value="Name/お名前"><br/>
+             <label for="email">Email:</label><br/>
+              <input type="text" id="Email" name="Email" value="Email"><br/>
+             <label for="name">Shipping Country:</label><br/>
+             <input type="text" id="Country" name="Country" value="Country to ship to/国"><br/>
+             
+             <input class="printbutton" type="submit" value="Continue" />
+                   
              </form>
             
      </div>
 
  <div id="frontpageright">
-   <h2>Picture Options:</h2>
-   <h3>Print Only (large size shown):</h3>
-    <p class="en">
-       <img src="/assets/images/printshop/2404_A7R08715_ai_sized.jpg"/><br/>
-       Printed with a ~20mm / 1" border, and signed in the border by the artist.
-     </p>
-     <ul>Print Sizes:          
-         <li><strong>Small: </strong> 127x178mm / 5"x7" (2L)</li>
-       <li><strong>Medium: </strong> 210x297mm / 8.5"x11" (A4, LTR) </li>
-       <li><strong>Large: </strong> 330x483mm / 13"x19" (A3+, Super B)</li>
-     </ul>
+  <p>Prints are made to order by the artist, on Epson Velvet Fine Art paper. At left is an approximation of what the print will look like (the hermosawave photography watermark will not appear on the print).</p>
      
-     <h3>Framed and Matted Print:</h3>
+     <h2>Framed and Matted Prints:</h2>
      <p class="en">
-      <img src="/assets/images/printshop/2404_A7R08715_ai.jpg"/><br/>
-      Shown: Print with white mat, in black metal frame. Artist’s signature is visible in the border, inside the mat. Special order options (at a small additional cost): black mat, black wood frame, white wood frame. Please inquire.
+      <img  class="sampleprint" src="/assets/images/printshop/2404_A7R08715_ai.jpg"/><br/>
+      Shown: Standard print with white mat, in a black metal frame. The artist’s signature in pencil is visible on the print, inside the mat.
     </p>
     <ul>Framed Finished Sizes (approximate):          
         <li><strong>Small: </strong> 145x200mm / 5.75"x7.75" </li>
       <li><strong>Medium: </strong> 305x395mm / 12"x15.5" </li>
       <li><strong>Large: </strong> 445x600mm / 17.5"x24" </li>
     </ul>
+  
+  <h2>Print Only:</h2>
+  <p class="en">
+     <img class="sampleprint" src="/assets/images/printshop/2404_A7R08715_ai_sized.jpg"/><br/>
+     Printed with a ~20mm / 1" border, and signed in the border by the artist.
+   </p>
+   <ul>Print Sizes:          
+       <li><strong>Small: </strong> 127x178mm / 5"x7" (2L)</li>
+     <li><strong>Medium: </strong> 210x297mm / 8.5"x11" (A4, LTR) </li>
+     <li><strong>Large: </strong> 330x483mm / 13"x19" (A3+, Super B)</li>
+   </ul>
   
   </div> <!-- end frontpageright -->
        
