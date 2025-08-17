@@ -132,78 +132,75 @@ Bamboo trees and fences this morning on Electric Avenue in Venice.
           function getExif() {
             var img1 = document.getElementById("img1");
 
-              EXIF.getData(img1, function() {
-                var make = EXIF.getTag(this, "Make");
-                var model = EXIF.getTag(this, "Model");
-                var iso = EXIF.getTag(this, "ISOSpeedRatings");
-               var lensModel = EXIF.getTag(this, "undefined");
-               //var lensModel = EXIF.getTag(this, "Lens");
-               //var lensModel = EXIF.getTag(this, "LensInfo");
-               var length = EXIF.getTag(this, "FocalLength");
-                var exposure = EXIF.getTag(this, "ExposureTime"); 
-                var aperture = EXIF.getTag(this, "FNumber");
-                var taken = EXIF.getTag(this, "DateTimeOriginal");
-                var caption = EXIF.getTag(this, "ImageDescription");
-                 var latitude = EXIF.getTag(this, "GPSLatitude");
-                var longitude = EXIF.getTag(this, "GPSLongitude");
-    
-       //debug
-       //console.log('All EXIF tags:', EXIF.getAllTags(this));        
+  
+     EXIF.getData(img1, function() {
+                 var make = EXIF.getTag(this, "Make");
+                 var model = EXIF.getTag(this, "Model");
+                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
+                 var length = EXIF.getTag(this, "FocalLength");
+                 var exposure = EXIF.getTag(this, "ExposureTime"); 
+                 var lensModel = EXIF.getTag(this, "undefined");
+                 var aperture = EXIF.getTag(this, "FNumber");
+                 var taken = EXIF.getTag(this, "DateTimeOriginal");
+                 var caption = EXIF.getTag(this, "ImageDescription");
+                  var latitude = EXIF.getTag(this, "GPSLatitude");
+                 var longitude = EXIF.getTag(this, "GPSLongitude");
+                  
                  
+                 /* transformations */         
+                   var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
                    
-                /* transformations */         
-                  var expo = (exposure < .51) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
-                  
-                  switch (model) {
-                      case "ILCE-7RM3":
-                          var mod = "a7r3";
-                          break;
-                     case "ILCE-7M3":
-                          var mod = "a7III";
-                          break;
-                     case "ILCE-7RM2":
-                          var mod = "a7r2";
-                          break;
-                      case "FC2103": 
-                          var mod = "Mavic Air";
-                          break;
-                     default:
-                          var mod = model;
-                  }
-                  
-                  switch (make) {
-                      case "NIKON CORPORATION":
-                          var mak = "";
-                          break;
+                   switch (model) {
+                       case "ILCE-7RM3":
+                           var mod = "a7r3";
+                           break;
+                       case "ILCE-7RM2":
+                           var mod = "a7r2";
+                           break;
+                       case "FC2103":
+                           var mod = "Mavic Air";
+                           break;
+                      default:
+                           var mod = model;
+                   }
+                   
+                         
+                   switch (make) {
+                       case "NIKON CORPORATION":
+                           var mak = "";
+                           break;
+                      
+                      default:
+                           var mak = make;
+                   }
+                   
+                   
+                   // some string/date manipulations //
+                   
+                     var dt = taken.split(" ");
+                     var dtime = dt[1];
+                     dt = dt[0];
+                     var ddate = dt.replace(/:/g, "/");
+                     dtime = dtime.substring(0, 5);
+             
+                   
+                 /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
                      
-                     default:
-                          var mak = make;
-                  }
-                  
-                  
-                  // some string/date manipulations //
-                  
-                    var dt = taken.split(" ");
-                    var dtime = dt[1];
-                    dt = dt[0];
-                    var ddate = dt.replace(/:/g, "/");
-                    dtime = dtime.substring(0, 5);
-            
-                       
-                  
-                /* Output */
-               var exif = document.getElementById("exif");
-                exif.innerHTML =
-                    `Taken: ${ddate}, ${dtime}<br/>
+                   
+                 /* Output */
+                var exif = document.getElementById("exif");
+                 exif.innerHTML =
+                     `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${mak} ${mod} <br/>
                      Lens: ${lensModel} <br/>                     
-                    Focal Length: ${length}mm <br/>
-                      Exposure: ${expo} <br/>
-                    Aperture: f/${aperture}<br/>
-                    ISO: ${iso}`;
-            });
-        }
-    </script>
+                      Focal Length: ${length}mm <br/>
+                     Exposure: ${expo} <br/>
+                     Aperture: f/${aperture}<br/>
+                     ISO: ${iso} `;
+             });
+         }
+     </script>
+
         
         <!-- /// Google API ///
     /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
