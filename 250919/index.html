@@ -1,10 +1,11 @@
 <!doctype html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
-    <title>Hermosawave Photography: Latest Picture</title>
-        <!-- Typekit Asian Font Loader -->
+    <title>Hermosawave Photography: Evening at Avenue I</title>
+ 
+    <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 -->
@@ -18,10 +19,12 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-      <link rel="stylesheet" href="/assets/css/styles.css">
 
-      <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
-      
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
+           
+        
       
       <!-- Favicon links -->
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -41,12 +44,21 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
+
       
-      
+      <!-- OpenGraph Attributes -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://hermosawavephotography.com/250919/" />
+      <meta property="og:image" content="https://hermosawavephotography.com/assets/images/2025/2509_A7R09695_x.jpg" />
+      <meta property="og:site_name" content="Hermosawave Photography" />
+      <meta property="og:image:type" content="image/jpeg" />   
+      <meta property="og:image:alt" content="Evening at Avenue I" />
+ 
       
   </head>
   <body>
-      <div class="mainbody">
+    <div class="mainbody">
+  
          
 <nav>
 
@@ -55,7 +67,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </div>
   
     <div class="navitem">
-    <a href="/latest/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/latest/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -76,39 +88,45 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   
 </nav>
 
-         
-                <!doctype html>
+        
+    <div class="topbody horizontal ">
+    <div class="mainimage">
 
-<!-- get latest post -->
- 
-
-<div class="topbody horizontal ">
-  
-     <div class="mainimage">
+         <div class="mainimageleft mobileyes">        
+             <a href="" title="<< Previous photo">
+                 <img class="clearpixel" src="/assets/images/clearpixel.png"/>
+             </a>
+         </div>
          <a href="/250916/">
-             <img id="img1"  src="/assets/images/2025/2509_A7R09695_x.jpg" alt="Evening at Avenue I" title="Next photo >>"/>
+          
+            <img id="img1"  src="/assets/images/2025/2509_A7R09695_x.jpg" alt="Evening at Avenue I" title="Next photo >>"/>
          </a>
+
     </div>
-    <div class="description  ">
-            <p class="subtitle">Hermosawave Picture of the Day</p>
-         <h3>Friday, September 19, 2025</h3>
+
+
+      <div class="description horizontal ">
+          <p class="subtitle">Hermosawave Picture of the Day</p>
+        <h3>Friday, September 19, 2025</h3>
 	<h2>Evening at Avenue I</h2>
- 	   <div class="text">
- 	      <p class="en">
+	   <div class="text">
+         <p class="en">
 Looking across the Santa Monica Bay towards Malibu this evening, from the south end of Redondo Beach. A sailboat heads home to King Harbor Marina, while in the distance at right are the ever present El Segundo oil tankers. A couple enjoys the view.
 </p>
 <p class="jp">    
 <span class="title_jp">アベニューIの夕べ</span>
 今夕、レドンド・ビーチの南端からサンタモニカ湾をマリブ方面に眺める。ヨットがキング・ハーバー・マリーナに帰港し、右の遠方にはエルセグンドの石油タンカーが見える。景色を楽しむカップル。
-</p>
-       </div>             
-     <h4>Taken in Redondo Beach, California</h4>
+</p>   
+        </div>
+      <h4>Taken in Redondo Beach, California</h4>
 
-    <!-- exif data:-->
+
+
+   <!-- exif data:-->
     <div id="exif"></div>
       
 
-       <!-- exif js code... does it work? -->
+       <!-- exif js code-->
     <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
 
        <script>
@@ -118,100 +136,124 @@ Looking across the Santa Monica Bay towards Malibu this evening, from the south 
           function getExif() {
             var img1 = document.getElementById("img1");
 
-              EXIF.getData(img1, function() {
-                var make = EXIF.getTag(this, "Make");
-                var model = EXIF.getTag(this, "Model");
-                var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
-                var exposure = EXIF.getTag(this, "ExposureTime"); 
-                var lensModel = EXIF.getTag(this, "undefined");
-                var aperture = EXIF.getTag(this, "FNumber");
-                var taken = EXIF.getTag(this, "DateTimeOriginal");
-                var caption = EXIF.getTag(this, "ImageDescription");
-                 var latitude = EXIF.getTag(this, "GPSLatitude");
-                var longitude = EXIF.getTag(this, "GPSLongitude");
+  
+     EXIF.getData(img1, function() {
+                 var make = EXIF.getTag(this, "Make");
+                 var model = EXIF.getTag(this, "Model");
+                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
+                 var length = EXIF.getTag(this, "FocalLength");
+                 var exposure = EXIF.getTag(this, "ExposureTime"); 
+                 var lensModel = EXIF.getTag(this, "undefined");
+                 var aperture = EXIF.getTag(this, "FNumber");
+                 var taken = EXIF.getTag(this, "DateTimeOriginal");
+                 var caption = EXIF.getTag(this, "ImageDescription");
+                  var latitude = EXIF.getTag(this, "GPSLatitude");
+                 var longitude = EXIF.getTag(this, "GPSLongitude");
+                  
                  
-                
-                /* transformations */         
-                  var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
-                  
-                  switch (model) {
-                      case "ILCE-7RM3":
-                          var mod = "a7r3";
-                          break;
-                      case "ILCE-7RM2":
-                          var mod = "a7r2";
-                          break;
-                      case "FC2103":
-                          var mod = "Mavic Air";
-                          break;
-                     default:
-                          var mod = model;
-                  }
-                  
-                        
-                  switch (make) {
-                      case "NIKON CORPORATION":
-                          var mak = "";
-                          break;
+                 /* transformations */         
+                   var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
+                   
+                   switch (model) {
+                       case "ILCE-7RM3":
+                           var mod = "a7r3";
+                           break;
+                       case "ILCE-7RM2":
+                           var mod = "a7r2";
+                           break;
+                       case "FC2103":
+                           var mod = "Mavic Air";
+                           break;
+                      default:
+                           var mod = model;
+                   }
+                   
+                         
+                   switch (make) {
+                       case "NIKON CORPORATION":
+                           var mak = "";
+                           break;
+                      
+                      default:
+                           var mak = make;
+                   }
+                   
+                   
+                   // some string/date manipulations //
+                   
+                     var dt = taken.split(" ");
+                     var dtime = dt[1];
+                     dt = dt[0];
+                     var ddate = dt.replace(/:/g, "/");
+                     dtime = dtime.substring(0, 5);
+             
+                   
+                 /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
                      
-                     default:
-                          var mak = make;
-                  }
-                  
-                  
-                  // some string/date manipulations //
-                  
-                    var dt = taken.split(" ");
-                    var dtime = dt[1];
-                    dt = dt[0];
-                    var ddate = dt.replace(/:/g, "/");
-                    dtime = dtime.substring(0, 5);
-            
-                  
-                /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
-                    
-                  
-                /* Output */
-               var exif = document.getElementById("exif");
-                exif.innerHTML =
-                    `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${mak} ${mod} <br/>
-                    Lens: ${lensModel} <br/>                     
-                     Focal Length: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
-                    Aperture: f/${aperture}<br/>
-                    ISO: ${iso} `;
-            });
-        }
-    </script>
-
-        <p class="mobile">Zoom in for more detail.</p>
-              <p>PictureCode: 250919</p>
-
-<p class="en">
-              <a href="/studioprints/index.php?picturecode=250919&date=September 19, 2025 &title=Evening at Avenue I&image=/assets/images/2025/2509_A7R09695_x.jpg"> <em>Buy a print of this picture...</em></a>
-              </p>
-
-   </div> <!-- end description -->
-       
-</div> <!-- end topbody -->
-
-      <div class="post-nav">
-
-  <div>
-      
-    
-    <a href="/250916/">Sep 16: Hermosa Sunset &nbsp;&#8594;</a>
-    
-  </div>
-
-</div>
-       
-
+                   
+                 /* Output */
+                var exif = document.getElementById("exif");
+                 exif.innerHTML =
+                     `Taken: ${ddate}, ${dtime}<br/>
+                     Camera: ${mak} ${mod} <br/>
+                     Lens: ${lensModel} <br/>                     
+                      Focal Length: ${length}mm <br/>
+                     Exposure: ${expo} <br/>
+                     Aperture: f/${aperture}<br/>
+                     ISO: ${iso} `;
+             });
+         }
+     </script>
 
         
-        <footer>
+        <!-- /// Google API ///
+    /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
+https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
+DMS: 35°0'45.804" N 135°40'20.14" E converts to: 35.01250000 135.67222222
+EXIF Returns: 35,0.7501,0   135,40.3623,0
+
+https://www.google.com/maps/search/?api=1&query=35.01250000,135.67222222
+
+Try this:
+https://www.google.com/maps/search/?api=1&query=35,0.7501,0,135,40.3623,0
+
+
+More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-gps-information-to-lat-lng-decimal-numbers
+-->
+
+
+        <p class="mobile">Zoom in for more detail.</p>
+        <p>PictureCode: 250919</p>
+      
+        
+    <!-- Categories and Tags (not displayed now)-->
+      <div id="tagsection"> 
+         <p class="tags"> PictureCode: 250919 <br/>
+         Location: Redondo Beach<br/>
+      Keywords: golden hour, Beach, Lifeguard Towers</p> 
+         </div>
+         
+       <p class="en">
+<a href="/studioprints/index.php?picturecode=250919&date=September 19, 2025 &title=Evening at Avenue I&image=/assets/images/2025/2509_A7R09695_x.jpg"><em>Buy a print of this picture...</em></a> 
+</p>  
+       
+   </div> <!-- end description -->
+        
+        </div> <!-- end topbody -->     
+
+
+    <!-- Previous Next Navigation -->
+   <div class="post-nav">
+        
+       
+        
+            <div class="post-nav-next">
+                <a href="/250916/">Sep&nbsp;16:&nbsp;Hermosa Sunset&nbsp;&#8594;</a>
+            </div>
+        
+     </div>
+     
+    <footer>
     <div class="footer1">
         
 <nav>
@@ -221,7 +263,7 @@ Looking across the Santa Monica Bay towards Malibu this evening, from the south 
     </div>
   
     <div class="navitem">
-    <a href="/latest/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/latest/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -268,6 +310,10 @@ Looking across the Santa Monica Bay towards Malibu this evening, from the south 
                   
     </div>
 </footer>
-      </div>
+
+
+  </div> <!-- end mainbody -->
+
+
   </body>
 </html>
