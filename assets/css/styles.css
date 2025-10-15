@@ -68,6 +68,14 @@ body {
   height: 100%;
 }
 
+.max1000 {
+  max-width: 1000px;
+}
+
+.max800 {
+  max-width: 600px;
+}
+
 p {
   font-weight: 300;
   font-style: normal;
