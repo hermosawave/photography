@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
-    <title>Hermosawave Photography: Latest Picture</title>
+    <title>Hermosawave Photography: </title>
         <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
@@ -19,10 +19,11 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   })(document);
 </script>
       <link rel="stylesheet" href="/assets/css/styles.css">
+      
+    <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
+      
+           
 
-      <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
-      
-      
       <!-- Favicon links -->
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -41,13 +42,12 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
-      
-      
-      
+
+
   </head>
   <body>
       <div class="mainbody">
-         
+        
 <nav>
 
     <div class="navitem">
@@ -55,7 +55,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </div>
   
     <div class="navitem">
-    <a href="/latest/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/latest/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -76,141 +76,26 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   
 </nav>
 
-         
-                <!doctype html>
-
-<!-- get latest post -->
- 
-
-<div class="topbody horizontal ">
+    <div class="topbody">  
+        <h1>Photos of Vietnam</h1>
+        <p>A trip to Vietnam in 2025.</p>
+        <p>Click thumbnail for a larger version.　
+            <!-- 拡大するには、サムネイルをクリックしてください。-->
+        </p>  
+          <div class="thumbnailgroup">
+    
   
-     <div class="mainimage">
-         <a href="/251025/">
-             <img id="img1"  src="/assets/images/2025/2510_A7R00161.jpg" alt="Vietnam Typhoon" title="Next photo >>"/>
-         </a>
-    </div>
-    <div class="description  ">
-            <p class="subtitle">Hermosawave Picture of the Day</p>
-         <h3>Sunday, October 26, 2025</h3>
-	<h2>Vietnam Typhoon</h2>
- 	   <div class="text">
- 	      <p class="en">
-First time in Vietnam and we were welcomed by Typhoon Fengshen, heavy rain and flooding. That did not stop the locals however, who simply donned their ponchos and continued on.
-</p>
-<p class="jp">    
-<span class="title_jp">ベトナム台風</span>  
-初めてのベトナムで、私たちは台風12号の大雨と洪水に見舞われた。しかし、それでも地元の人々はポンチョを着込み、そのまま進み続けた。
-</p>
-       </div>             
-     <h4>Taken in Da Nang, Vietnam</h4>
-
-    <!-- exif data:-->
-    <div id="exif"></div>
-      
-
-       <!-- exif js code... does it work? -->
-    <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
-
-       <script>
-        "use strict";
-        window.onload=getExif;
-
-          function getExif() {
-            var img1 = document.getElementById("img1");
-
-              EXIF.getData(img1, function() {
-                var make = EXIF.getTag(this, "Make");
-                var model = EXIF.getTag(this, "Model");
-                var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
-                var exposure = EXIF.getTag(this, "ExposureTime"); 
-                var lensModel = EXIF.getTag(this, "undefined");
-                var aperture = EXIF.getTag(this, "FNumber");
-                var taken = EXIF.getTag(this, "DateTimeOriginal");
-                var caption = EXIF.getTag(this, "ImageDescription");
-                 var latitude = EXIF.getTag(this, "GPSLatitude");
-                var longitude = EXIF.getTag(this, "GPSLongitude");
-                 
-                
-                /* transformations */         
-                  var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
-                  
-                  switch (model) {
-                      case "ILCE-7RM3":
-                          var mod = "a7r3";
-                          break;
-                      case "ILCE-7RM2":
-                          var mod = "a7r2";
-                          break;
-                      case "FC2103":
-                          var mod = "Mavic Air";
-                          break;
-                     default:
-                          var mod = model;
-                  }
-                  
-                        
-                  switch (make) {
-                      case "NIKON CORPORATION":
-                          var mak = "";
-                          break;
-                     
-                     default:
-                          var mak = make;
-                  }
-                  
-                  
-                  // some string/date manipulations //
-                  
-                    var dt = taken.split(" ");
-                    var dtime = dt[1];
-                    dt = dt[0];
-                    var ddate = dt.replace(/:/g, "/");
-                    dtime = dtime.substring(0, 5);
-            
-                  
-                /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
-                    
-                  
-                /* Output */
-               var exif = document.getElementById("exif");
-                exif.innerHTML =
-                    `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${mak} ${mod} <br/>
-                    Lens: ${lensModel} <br/>                     
-                     Focal Length: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
-                    Aperture: f/${aperture}<br/>
-                    ISO: ${iso} `;
-            });
-        }
-    </script>
-
-        <p class="mobile">Zoom in for more detail.</p>
-              <p>PictureCode: 251026</p>
-
-<p class="en">
-              <a href="/studioprints/index.php?picturecode=251026&date=October 26, 2025 &title=Vietnam Typhoon&image=/assets/images/2025/2510_A7R00161.jpg"> <em>Buy a print of this picture...</em></a>
-              </p>
-
-   </div> <!-- end description -->
-       
-</div> <!-- end topbody -->
-
-      <div class="post-nav">
-
-  <div>
-      
     
-    <a href="/251025/">Oct 25: Daikaku-ji Temple・大覚寺 &nbsp;&#8594;</a>
+    <div class="thumbnail">
+        <div class="thumbnailimage">
+        <a href="/251026/"><img src="/assets/images/2025/2510_A7R00161.jpg" title="Click to view larger・クリックして拡大表示"/></a>
+         </div>
+           
+        <a href="/251026/">October 26, 2025<br/>Vietnam Typhoon</a>
+     </div>
     
-  </div>
-
-</div>
-       
-
-
-        
+</div>   
+          </div>
         <footer>
     <div class="footer1">
         
@@ -221,7 +106,7 @@ First time in Vietnam and we were welcomed by Typhoon Fengshen, heavy rain and f
     </div>
   
     <div class="navitem">
-    <a href="/latest/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/latest/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
