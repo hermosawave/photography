@@ -96,6 +96,10 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <a href="/emptykyoto/" >Empty&nbsp;Kyoto</a>&nbsp;&nbsp;
     </div>
   
+    <div class="navitem">
+    <a href="/calendar/" >2026&nbsp;Calendar</a>&nbsp;&nbsp;
+    </div>
+  
 </nav>
 
          
@@ -236,6 +240,10 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   
     <div class="navitem">
     <a href="/emptykyoto/" >Empty&nbsp;Kyoto</a>&nbsp;&nbsp;
+    </div>
+  
+    <div class="navitem">
+    <a href="/calendar/" >2026&nbsp;Calendar</a>&nbsp;&nbsp;
     </div>
   
 </nav>
