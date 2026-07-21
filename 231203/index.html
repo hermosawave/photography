@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
     <title>Hermosawave Photography: Fallen Leaves・落ち葉</title>
- 
+
     <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
@@ -23,9 +23,9 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <link rel="stylesheet" href="/assets/css/styles.css">
 
     <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
-           
-        
-      
+
+
+
       <!-- Favicon links -->
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -45,20 +45,20 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
 
-      
+
       <!-- OpenGraph Attributes -->
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://hermosawavephotography.com/231203/" />
       <meta property="og:image" content="https://hermosawavephotography.com/assets/images/2023/2312_A7R05031-2x.jpg" />
       <meta property="og:site_name" content="Hermosawave Photography" />
-      <meta property="og:image:type" content="image/jpeg" />   
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:alt" content="Fallen Leaves・落ち葉" />
- 
-      
+
+
   </head>
   <body>
     <div class="mainbody">
-  
+
          
 <nav>
 
@@ -92,17 +92,17 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   
 </nav>
 
-        
+
     <div class="topbody horizontal ">
     <div class="mainimage">
 
-         <div class="mainimageleft mobileyes">        
+         <div class="mainimageleft mobileyes">
              <a href="/231204/" title="<< Previous photo">
                  <img class="clearpixel" src="/assets/images/clearpixel.png"/>
              </a>
          </div>
          <a href="/231202/">
-          
+
             <img id="img1"  src="/assets/images/2023/2312_A7R05031-2x.jpg" alt="Fallen Leaves・落ち葉" title="Next photo >>"/>
          </a>
 
@@ -122,7 +122,7 @@ Red maple leaves on the ground at Enrian Temple in Arashiyama.
 嵐山にある厭離庵の落ち葉。
 </p>
 
-   
+
         </div>
       <h4>Taken in Arashiyama, Kyoto, Japan</h4>
 
@@ -130,7 +130,7 @@ Red maple leaves on the ground at Enrian Temple in Arashiyama.
 
    <!-- exif data:-->
     <div id="exif"></div>
-      
+
 
        <!-- exif js code-->
     <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
@@ -142,27 +142,30 @@ Red maple leaves on the ground at Enrian Temple in Arashiyama.
           function getExif() {
             var img1 = document.getElementById("img1");
 
-  
+
      EXIF.getData(img1, function() {
                  var make = EXIF.getTag(this, "Make");
                  var model = EXIF.getTag(this, "Model");
                  var iso = EXIF.getTag(this, "ISOSpeedRatings");
                  var length = EXIF.getTag(this, "FocalLength");
-                 var exposure = EXIF.getTag(this, "ExposureTime"); 
+                 var exposure = EXIF.getTag(this, "ExposureTime");
                  var lensModel = EXIF.getTag(this, "undefined");
                  var aperture = EXIF.getTag(this, "FNumber");
                  var taken = EXIF.getTag(this, "DateTimeOriginal");
                  var caption = EXIF.getTag(this, "ImageDescription");
                   var latitude = EXIF.getTag(this, "GPSLatitude");
                  var longitude = EXIF.getTag(this, "GPSLongitude");
-                  
-                 
-                 /* transformations */         
+
+
+                 /* transformations */
                    var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
-                   
+
                    switch (model) {
-                       case "ILCE-7RM3":
-                           var mod = "a7r3";
+                          case "ILCE-7RM3":
+                            var mod = "a7r3";
+                            break;
+                        case "DSC-RX1RM3":
+                           var mod = "RX1r3";
                            break;
                        case "ILCE-7RM2":
                            var mod = "a7r2";
@@ -173,36 +176,36 @@ Red maple leaves on the ground at Enrian Temple in Arashiyama.
                       default:
                            var mod = model;
                    }
-                   
-                         
+
+
                    switch (make) {
                        case "NIKON CORPORATION":
                            var mak = "";
                            break;
-                      
+
                       default:
                            var mak = make;
                    }
-                   
-                   
+
+
                    // some string/date manipulations //
-                   
+
                      var dt = taken.split(" ");
                      var dtime = dt[1];
                      dt = dt[0];
                      var ddate = dt.replace(/:/g, "/");
                      dtime = dtime.substring(0, 5);
-             
-                   
+
+
                  /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
-                     
-                   
+
+
                  /* Output */
                 var exif = document.getElementById("exif");
                  exif.innerHTML =
                      `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${mak} ${mod} <br/>
-                     Lens: ${lensModel} <br/>                     
+                     Lens: ${lensModel} <br/>
                       Focal Length: ${length}mm <br/>
                      Exposure: ${expo} <br/>
                      Aperture: f/${aperture}<br/>
@@ -211,7 +214,7 @@ Red maple leaves on the ground at Enrian Temple in Arashiyama.
          }
      </script>
 
-        
+
         <!-- /// Google API ///
     /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
 https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
@@ -230,22 +233,22 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
 
         <p class="mobile">Zoom in for more detail.</p>
         <p>PictureCode: 231203</p>
-      
-        
+
+
     <!-- Categories and Tags (not displayed now)-->
-      <div id="tagsection"> 
+      <div id="tagsection">
          <p class="tags"> PictureCode: 231203 <br/>
          Location: Kyoto<br/>
-      Keywords: Temples, Foliage</p> 
+      Keywords: Temples, Foliage</p>
          </div>
-         
+
        <p class="en">
 <a href="/studioprints/index.php?picturecode=231203&date=December  3, 2023 &title=Fallen Leaves・落ち葉&image=/assets/images/2023/2312_A7R05031-2x.jpg"><em>Buy a print of this picture...</em></a> 
-</p>  
-       
+</p>
+
    </div> <!-- end description -->
-        
-        </div> <!-- end topbody -->     
+
+        </div> <!-- end topbody -->
 
 
     <!-- Previous Next Navigation -->
@@ -256,20 +259,20 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
         </div>
         <div>
                 &nbsp; <a href="/latest/">Latest</a> &nbsp;
-            <span class="mobileyes"> 
+            <span class="mobileyes">
                 &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
             </span>
-         
+
         </div>
         
-       
+
         
             <div class="post-nav-next">
                 <a href="/231202/">Dec&nbsp;2:&nbsp;Mt. Hiei &amp; Ninnaji・比叡山と仁和寺&nbsp;&#8594;</a>
             </div>
         
      </div>
-     
+
     <footer>
     <div class="footer1">
         

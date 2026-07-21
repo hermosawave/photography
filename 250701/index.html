@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
     <title>Hermosawave Photography: Stepping Stones・飛び石</title>
- 
+
     <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
@@ -23,9 +23,9 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     <link rel="stylesheet" href="/assets/css/styles.css">
 
     <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
-           
-        
-      
+
+
+
       <!-- Favicon links -->
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -45,20 +45,20 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
 
-      
+
       <!-- OpenGraph Attributes -->
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://hermosawavephotography.com/250701/" />
       <meta property="og:image" content="https://hermosawavephotography.com/assets/images/2025/2507_DSCF1151.jpg" />
       <meta property="og:site_name" content="Hermosawave Photography" />
-      <meta property="og:image:type" content="image/jpeg" />   
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:alt" content="Stepping Stones・飛び石" />
- 
-      
+
+
   </head>
   <body>
     <div class="mainbody">
-  
+
          
 <nav>
 
@@ -92,17 +92,17 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
   
 </nav>
 
-        
+
     <div class="topbody vertical ">
     <div class="mainimage">
 
-         <div class="mainimageleft mobileyes">        
+         <div class="mainimageleft mobileyes">
              <a href="/250703/" title="<< Previous photo">
                  <img class="clearpixel" src="/assets/images/clearpixel.png"/>
              </a>
          </div>
          <a href="/250630/">
-          
+
             <img id="img1"  src="/assets/images/2025/2507_DSCF1151.jpg" alt="Stepping Stones・飛び石" title="Next photo >>"/>
          </a>
 
@@ -121,7 +121,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 <p class="jp">
 鴨川に架かる夷川飛び石で、人々が涼んでいる。
 </p>
-   
+
         </div>
       <h4>Taken in Kyoto, Japan</h4>
 
@@ -129,7 +129,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
    <!-- exif data:-->
     <div id="exif"></div>
-      
+
 
        <!-- exif js code-->
     <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
@@ -141,27 +141,30 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
           function getExif() {
             var img1 = document.getElementById("img1");
 
-  
+
      EXIF.getData(img1, function() {
                  var make = EXIF.getTag(this, "Make");
                  var model = EXIF.getTag(this, "Model");
                  var iso = EXIF.getTag(this, "ISOSpeedRatings");
                  var length = EXIF.getTag(this, "FocalLength");
-                 var exposure = EXIF.getTag(this, "ExposureTime"); 
+                 var exposure = EXIF.getTag(this, "ExposureTime");
                  var lensModel = EXIF.getTag(this, "undefined");
                  var aperture = EXIF.getTag(this, "FNumber");
                  var taken = EXIF.getTag(this, "DateTimeOriginal");
                  var caption = EXIF.getTag(this, "ImageDescription");
                   var latitude = EXIF.getTag(this, "GPSLatitude");
                  var longitude = EXIF.getTag(this, "GPSLongitude");
-                  
-                 
-                 /* transformations */         
+
+
+                 /* transformations */
                    var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
-                   
+
                    switch (model) {
-                       case "ILCE-7RM3":
-                           var mod = "a7r3";
+                          case "ILCE-7RM3":
+                            var mod = "a7r3";
+                            break;
+                        case "DSC-RX1RM3":
+                           var mod = "RX1r3";
                            break;
                        case "ILCE-7RM2":
                            var mod = "a7r2";
@@ -172,36 +175,36 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                       default:
                            var mod = model;
                    }
-                   
-                         
+
+
                    switch (make) {
                        case "NIKON CORPORATION":
                            var mak = "";
                            break;
-                      
+
                       default:
                            var mak = make;
                    }
-                   
-                   
+
+
                    // some string/date manipulations //
-                   
+
                      var dt = taken.split(" ");
                      var dtime = dt[1];
                      dt = dt[0];
                      var ddate = dt.replace(/:/g, "/");
                      dtime = dtime.substring(0, 5);
-             
-                   
+
+
                  /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
-                     
-                   
+
+
                  /* Output */
                 var exif = document.getElementById("exif");
                  exif.innerHTML =
                      `Taken: ${ddate}, ${dtime}<br/>
                      Camera: ${mak} ${mod} <br/>
-                     Lens: ${lensModel} <br/>                     
+                     Lens: ${lensModel} <br/>
                       Focal Length: ${length}mm <br/>
                      Exposure: ${expo} <br/>
                      Aperture: f/${aperture}<br/>
@@ -210,7 +213,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
          }
      </script>
 
-        
+
         <!-- /// Google API ///
     /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
 https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
@@ -229,22 +232,22 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
 
         <p class="mobile">Zoom in for more detail.</p>
         <p>PictureCode: 250701</p>
-      
-        
+
+
     <!-- Categories and Tags (not displayed now)-->
-      <div id="tagsection"> 
+      <div id="tagsection">
          <p class="tags"> PictureCode: 250701 <br/>
          Location: Kyoto<br/>
-      Keywords: Kamo River, Golden Hour</p> 
+      Keywords: Kamo River, Golden Hour</p>
          </div>
-         
+
        <p class="en">
 <a href="/studioprints/index.php?picturecode=250701&date=July  1, 2025 &title=Stepping Stones・飛び石&image=/assets/images/2025/2507_DSCF1151.jpg"><em>Buy a print of this picture...</em></a> 
-</p>  
-       
+</p>
+
    </div> <!-- end description -->
-        
-        </div> <!-- end topbody -->     
+
+        </div> <!-- end topbody -->
 
 
     <!-- Previous Next Navigation -->
@@ -255,20 +258,20 @@ More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-
         </div>
         <div>
                 &nbsp; <a href="/latest/">Latest</a> &nbsp;
-            <span class="mobileyes"> 
+            <span class="mobileyes">
                 &nbsp; <a href="/thumbnails/">Thumbnails</a> &nbsp;
             </span>
-         
+
         </div>
         
-       
+
         
             <div class="post-nav-next">
                 <a href="/250630/">Jun&nbsp;30:&nbsp;Tenryuji Temple・天龍寺&nbsp;&#8594;</a>
             </div>
         
      </div>
-     
+
     <footer>
     <div class="footer1">
         
