@@ -87,32 +87,32 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
  
 
 <div class="topbody horizontal ">
-  
+
      <div class="mainimage">
-         <a href="/260718/">
-             <img id="img1"  src="/assets/images/2026/2607_RX102785_edit.jpg" alt="Downtown Manhattan Beach" title="Next photo >>"/>
+         <a href="/260720/">
+             <img id="img1"  src="/assets/images/2026/2607_RX102809-HDR.jpg" alt="Palm Sunset" title="Next photo >>"/>
          </a>
     </div>
     <div class="description  ">
             <p class="subtitle">Hermosawave Picture of the Day</p>
-         <h3>Monday, July 20, 2026</h3>
-	<h2>Downtown Manhattan Beach</h2>
+         <h3>Tuesday, July 21, 2026</h3>
+	<h2>Palm Sunset</h2>
  	   <div class="text">
  	      <p class="en">
-Looking down the last block of Manhattan Beach Boulevard at the palm trees, the pier,  and the ocean.
+Watching the sun set behind tall palm trees at the Manhattan Beach Pier.
 </p>
 <p class="jp">
-<span class="title_jp">ダウンタウン・マンハッタン・ビーチ</span>
-マンハッタン・ビーチ・ブールバードの最後のブロックを見下ろすと、ヤシの木や桟橋、そして海が見える。
+<span class="title_jp">パーム・サンセット</span>
+マンハッタン・ビーチ・ピアで、背の高いヤシの木々の向こうに沈む夕日を見ている。
 </p>
 
 
-       </div>             
+       </div>
      <h4>Taken in Manhattan Beach, California</h4>
 
     <!-- exif data:-->
     <div id="exif"></div>
-      
+
 
        <!-- exif js code... does it work? -->
     <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
@@ -129,23 +129,26 @@ Looking down the last block of Manhattan Beach Boulevard at the palm trees, the 
                 var model = EXIF.getTag(this, "Model");
                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
                 var length = EXIF.getTag(this, "FocalLength");
-                var exposure = EXIF.getTag(this, "ExposureTime"); 
+                var exposure = EXIF.getTag(this, "ExposureTime");
                 var lensModel = EXIF.getTag(this, "undefined");
                 var aperture = EXIF.getTag(this, "FNumber");
                 var taken = EXIF.getTag(this, "DateTimeOriginal");
                 var caption = EXIF.getTag(this, "ImageDescription");
                  var latitude = EXIF.getTag(this, "GPSLatitude");
                 var longitude = EXIF.getTag(this, "GPSLongitude");
-                 
-                
-                /* transformations */         
+
+
+                /* transformations */
                   var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
-                  
+
                   switch (model) {
                       case "ILCE-7RM3":
                           var mod = "a7r3";
                           break;
-                      case "ILCE-7RM2":
+                    case "DSC-RX1RM3":
+                     var mod = "RX1r3";
+                    break;
+                case "ILCE-7RM2":
                           var mod = "a7r2";
                           break;
                       case "FC2103":
@@ -154,36 +157,36 @@ Looking down the last block of Manhattan Beach Boulevard at the palm trees, the 
                      default:
                           var mod = model;
                   }
-                  
-                        
+
+
                   switch (make) {
                       case "NIKON CORPORATION":
                           var mak = "";
                           break;
-                     
+
                      default:
                           var mak = make;
                   }
-                  
-                  
+
+
                   // some string/date manipulations //
-                  
+
                     var dt = taken.split(" ");
                     var dtime = dt[1];
                     dt = dt[0];
                     var ddate = dt.replace(/:/g, "/");
                     dtime = dtime.substring(0, 5);
-            
-                  
+
+
                 /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
-                    
-                  
+
+
                 /* Output */
                var exif = document.getElementById("exif");
                 exif.innerHTML =
                     `Taken: ${ddate}, ${dtime}<br/>
                     Camera: ${mak} ${mod} <br/>
-                    Lens: ${lensModel} <br/>                     
+                    Lens: ${lensModel} <br/>
                      Focal Length: ${length}mm <br/>
                     Exposure: ${expo} <br/>
                     Aperture: f/${aperture}<br/>
@@ -193,22 +196,22 @@ Looking down the last block of Manhattan Beach Boulevard at the palm trees, the 
     </script>
 
         <p class="mobile">Zoom in for more detail.</p>
-              <p>PictureCode: 260720</p>
+              <p>PictureCode: 260721</p>
 
 <p class="en">
-              <a href="/studioprints/index.php?picturecode=260720&date=July 20, 2026 &title=Downtown Manhattan Beach&image=/assets/images/2026/2607_RX102785_edit.jpg"> <em>Buy a print of this picture...</em></a>
+              <a href="/studioprints/index.php?picturecode=260721&date=July 21, 2026 &title=Palm Sunset&image=/assets/images/2026/2607_RX102809-HDR.jpg"> <em>Buy a print of this picture...</em></a>
               </p>
 
    </div> <!-- end description -->
-       
+
 </div> <!-- end topbody -->
 
       <div class="post-nav">
 
   <div>
-      
+
     
-    <a href="/260718/">Jul 18: Horseshoe Pier &nbsp;&#8594;</a>
+    <a href="/260720/">Jul 20: Downtown Manhattan Beach &nbsp;&#8594;</a>
     
   </div>
 
