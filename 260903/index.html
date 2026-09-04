@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0, minimal-ui" />
-    <title>Hermosawave Photography: Latest Picture</title>
-        <!-- Typekit Asian Font Loader -->
+    <title>Hermosawave Photography: jAdis</title>
+
+    <!-- Typekit Asian Font Loader -->
 <!-- 
 font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 -->
@@ -18,9 +19,11 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-      <link rel="stylesheet" href="/assets/css/styles.css">
 
-      <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link href='https://hermosawavephotography.com/feed.xml' rel='alternate' type='application/atom+xml'>
+
 
 
       <!-- Favicon links -->
@@ -38,17 +41,15 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
       <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
       <link rel="manifest" href="/manifest.json">
- <!--
-        <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
-    -->
-
 
 
   </head>
   <body>
-      <div class="mainbody">
+    <div class="mainbody">
+
          
 <nav>
 
@@ -57,7 +58,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </div>
   
     <div class="navitem">
-    <a href="/latest/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/latest/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -83,24 +84,28 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 </nav>
 
 
-                <!doctype html>
+    <div class="topbody vertical ">
+    <div class="mainimage">
 
-<!-- get latest post -->
- 
-
-<div class="topbody vertical ">
-
-     <div class="mainimage">
+         <div class="mainimageleft mobileyes">
+             <a href="" title="<< Previous photo">
+                 <img class="clearpixel" src="/assets/images/clearpixel.png"/>
+             </a>
+         </div>
          <a href="/260831/">
-             <img id="img1"  src="/assets/images/2026/2609_A7R05372.jpg" alt="jAdis" title="Next photo >>"/>
+
+            <img id="img1"  src="/assets/images/2026/2609_A7R05372.jpg" alt="jAdis" title="Next photo >>"/>
          </a>
+
     </div>
-    <div class="description  ">
-            <p class="subtitle">Hermosawave Picture of the Day</p>
-         <h3>Thursday, September 3, 2026</h3>
+
+
+      <div class="description vertical ">
+          <p class="subtitle">Hermosawave Picture of the Day</p>
+        <h3>Thursday, September 3, 2026</h3>
 	<h2>jAdis</h2>
- 	   <div class="text">
- 	      <p class="en">
+	   <div class="text">
+         <p class="en">
     Looking in the window of <a href="https://www.jadisprops.com/" target="_blank">jAdis</a>, a vintage science toy/prop store is always a treat.
 </p>
 <p class="jp">
@@ -111,14 +116,16 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
 
 
 
-       </div>
-     <h4>Taken in Santa Monica, California</h4>
+        </div>
+      <h4>Taken in Santa Monica, California</h4>
 
-    <!-- exif data:-->
+
+
+   <!-- exif data:-->
     <div id="exif"></div>
 
 
-       <!-- exif js code... does it work? -->
+       <!-- exif js code-->
     <script src="https://cdn.jsdelivr.net/npm/exif-js" async></script>
 
        <script>
@@ -128,103 +135,127 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
           function getExif() {
             var img1 = document.getElementById("img1");
 
-              EXIF.getData(img1, function() {
-                var make = EXIF.getTag(this, "Make");
-                var model = EXIF.getTag(this, "Model");
-                var iso = EXIF.getTag(this, "ISOSpeedRatings");
-                var length = EXIF.getTag(this, "FocalLength");
-                var exposure = EXIF.getTag(this, "ExposureTime");
-                var lensModel = EXIF.getTag(this, "undefined");
-                var aperture = EXIF.getTag(this, "FNumber");
-                var taken = EXIF.getTag(this, "DateTimeOriginal");
-                var caption = EXIF.getTag(this, "ImageDescription");
-                 var latitude = EXIF.getTag(this, "GPSLatitude");
-                var longitude = EXIF.getTag(this, "GPSLongitude");
+
+     EXIF.getData(img1, function() {
+                 var make = EXIF.getTag(this, "Make");
+                 var model = EXIF.getTag(this, "Model");
+                 var iso = EXIF.getTag(this, "ISOSpeedRatings");
+                 var length = EXIF.getTag(this, "FocalLength");
+                 var exposure = EXIF.getTag(this, "ExposureTime");
+                 var lensModel = EXIF.getTag(this, "undefined");
+                 var aperture = EXIF.getTag(this, "FNumber");
+                 var taken = EXIF.getTag(this, "DateTimeOriginal");
+                 var caption = EXIF.getTag(this, "ImageDescription");
+                  var latitude = EXIF.getTag(this, "GPSLatitude");
+                 var longitude = EXIF.getTag(this, "GPSLongitude");
 
 
-                /* transformations */
-                  var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
+                 /* transformations */
+                   var expo = (exposure < .26) ? "1/" + (1/exposure) + " sec.": exposure + " seconds";
 
-                  switch (model) {
-                      case "ILCE-7RM3":
-                          var mod = "a7r3";
-                          break;
-                    case "DSC-RX1RM3":
-                     var mod = "RX1r3";
-                    break;
-                case "ILCE-7RM2":
-                          var mod = "a7r2";
-                          break;
-                      case "FC2103":
-                          var mod = "Mavic Air";
-                          break;
-                     default:
-                          var mod = model;
-                  }
-
-
-                  switch (make) {
-                      case "NIKON CORPORATION":
-                          var mak = "";
-                          break;
-
-                     default:
-                          var mak = make;
-                  }
+                   switch (model) {
+                          case "ILCE-7RM3":
+                            var mod = "a7r3";
+                            break;
+                        case "DSC-RX1RM3":
+                           var mod = "RX1r3";
+                           break;
+                       case "ILCE-7RM2":
+                           var mod = "a7r2";
+                           break;
+                       case "FC2103":
+                           var mod = "Mavic Air";
+                           break;
+                      default:
+                           var mod = model;
+                   }
 
 
-                  // some string/date manipulations //
+                   switch (make) {
+                       case "NIKON CORPORATION":
+                           var mak = "";
+                           break;
 
-                    var dt = taken.split(" ");
-                    var dtime = dt[1];
-                    dt = dt[0];
-                    var ddate = dt.replace(/:/g, "/");
-                    dtime = dtime.substring(0, 5);
-
-
-                /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
+                      default:
+                           var mak = make;
+                   }
 
 
-                /* Output */
-               var exif = document.getElementById("exif");
-                exif.innerHTML =
-                    `Taken: ${ddate}, ${dtime}<br/>
-                    Camera: ${mak} ${mod} <br/>
-                    Lens: ${lensModel} <br/>
-                     Focal Length: ${length}mm <br/>
-                    Exposure: ${expo} <br/>
-                    Aperture: f/${aperture}<br/>
-                    ISO: ${iso} `;
-            });
-        }
-    </script>
+                   // some string/date manipulations //
+
+                     var dt = taken.split(" ");
+                     var dtime = dt[1];
+                     dt = dt[0];
+                     var ddate = dt.replace(/:/g, "/");
+                     dtime = dtime.substring(0, 5);
+
+
+                 /*  var dateformat = (taken.getMonth() + "/" + taken.getDate() + "/" + taken.getFullYear()) ; */
+
+
+                 /* Output */
+                var exif = document.getElementById("exif");
+                 exif.innerHTML =
+                     `Taken: ${ddate}, ${dtime}<br/>
+                     Camera: ${mak} ${mod} <br/>
+                     Lens: ${lensModel} <br/>
+                      Focal Length: ${length}mm <br/>
+                     Exposure: ${expo} <br/>
+                     Aperture: f/${aperture}<br/>
+                     ISO: ${iso} `;
+             });
+         }
+     </script>
+
+
+        <!-- /// Google API ///
+    /// Using picture 1812_DJI_0175-HDR.dng (Dec 22) ///
+https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
+DMS: 35°0'45.804" N 135°40'20.14" E converts to: 35.01250000 135.67222222
+EXIF Returns: 35,0.7501,0   135,40.3623,0
+
+https://www.google.com/maps/search/?api=1&query=35.01250000,135.67222222
+
+Try this:
+https://www.google.com/maps/search/?api=1&query=35,0.7501,0,135,40.3623,0
+
+
+More GPS info: https://gis.stackexchange.com/questions/136925/how-to-parse-exif-gps-information-to-lat-lng-decimal-numbers
+-->
+
 
         <p class="mobile">Zoom in for more detail.</p>
-              <p>PictureCode: 260903</p>
+        <p>PictureCode: 260903</p>
 
-<p class="en">
-              <a href="/studioprints/index.php?picturecode=260903&date=September  3, 2026 &title=jAdis&image=/assets/images/2026/2609_A7R05372.jpg"> <em>Buy a print of this picture...</em></a>
-              </p>
+
+    <!-- Categories and Tags (not displayed now)-->
+      <div id="tagsection">
+         <p class="tags"> PictureCode: 260903 <br/>
+         Location: Santa Monica<br/>
+      Keywords: Architecture</p>
+         </div>
+
+       <p class="en">
+<a href="/studioprints/index.php?picturecode=260903&date=September  3, 2026 &title=jAdis&image=/assets/images/2026/2609_A7R05372.jpg"><em>Buy a print of this picture...</em></a> 
+</p>
 
    </div> <!-- end description -->
 
-</div> <!-- end topbody -->
-
-      <div class="post-nav">
-
-  <div>
-
-    
-    <a href="/260831/">Aug 31: Tower Sunset &nbsp;&#8594;</a>
-    
-  </div>
-
-</div>
-       
+        </div> <!-- end topbody -->
 
 
+    <!-- Previous Next Navigation -->
+   <div class="post-nav">
+        
 
-        <footer>
+        
+            <div class="post-nav-next">
+                <a href="/260831/">Aug&nbsp;31:&nbsp;Tower Sunset&nbsp;&#8594;</a>
+            </div>
+        
+     </div>
+
+    <footer>
     <div class="footer1">
         
 <nav>
@@ -234,7 +265,7 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
     </div>
   
     <div class="navitem">
-    <a href="/latest/" class="current">Latest Picture</a>&nbsp;&nbsp;
+    <a href="/latest/" >Latest Picture</a>&nbsp;&nbsp;
     </div>
   
     <div class="navitem">
@@ -285,6 +316,10 @@ font-family: ryo-gothic-plusn, sans-serif; (200, 400, 700)
                   
     </div>
 </footer>
-      </div>
+
+
+  </div> <!-- end mainbody -->
+
+
   </body>
 </html>
